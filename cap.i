@@ -3825,18 +3825,18 @@ def iphrasec_s ( a, s, e, c, n ):  return  ( True, s, e-s, a[3])
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    defn = .squa w '[' w .defname w ':' w .typeseq w '~' w .istmt w ']' ; 
+    defn = dpr .sq w '[' w .dnm w ':' w .tsq w '~' w .istmt w ']' dpo ; 
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def defn_s ( a, s, e, c, n ):
-  if(a[5]!=''):
-    context[a[5][1]]=a[13]
+  if(a[6][1]!=''):
+    context[a[6][1]]=a[14]
   else:
     print "anonymous definition!"
-  if len(a[5])>0: return ( True, s, e-s, ({1:'c'},"", n ))
-  else: return ( True, s, e-s, ({1:'c'},a[13], n ))
+  if len(a[2])>0: return ( True, s, e-s, (c,"", n ))
+  else: return ( True, s, e-s, (c,a[14], n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3851,13 +3851,43 @@ def defn_s ( a, s, e, c, n ):
    "; $ ); [:xcpe~ "ibnf example" ]];
 
 
+    [:mnot~ "definition preparation" ] ;
+    [:para~ "Definitions have semantic preparation required."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
+
+    dpr     =  ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
+
+def dpr_s ( a, s, e, c, n ):
+ return ( True, s, e-s, ({1:'pre'},a, n ))
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
+
+    [:mnot~ "definition preparation" ] ;
+    [:para~ "Definitions require cleanup."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
+
+    dpo     =  ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
+
+def dpo_s ( a, s, e, c, n ):
+ return ( True, s, e-s, ({1:'post'},a, n ))
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
+
     [:mnot~ "defname" ] ;
     [:para~ "The name of a definition is made from a sequence of labels that may
              indicate variables."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    defname     /  w vlabel .defname ;
+    dnm     /  w vlabel .dnm ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
 
@@ -3894,7 +3924,7 @@ def defn_s ( a, s, e, c, n ):
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    squa / '@' w .path ; 
+    sq / '@' w .path ; 
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
 
@@ -4016,12 +4046,12 @@ def expand_s ( a, s, e, c, n ): return ( True, s, e-s, (c, "Expansion!", n ))
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    typeseq     =  typeref ':' .typeseq ;
+    tsq     =  typeref ':' .tsq ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def typeseq_s ( a, s, e, c, n ): return ( True, s, e-s, (c, fi[s:e], n ))
+def tsq_s ( a, s, e, c, n ): return ( True, s, e-s, (c, fi[s:e], n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4582,7 +4612,7 @@ s/    if ok: n=n+1;\(.*\))/    if ok: n=n+1;\1, a[n-1][0])/g'  | sed -e '
 s/    if ok: return\(.*\)) )/    if ok: return\1, a[n][0]) )/g'  | sed -e '
 s/    if not met: (met\(.*\))/    if not met: (met\1, c)/g' | sed -e '
 s/mark("\(.*\)",s, \(.*\)) )/mark("\1",s, \2,"\1") )/g'  | sed -e '
-s/mark("\(.*\)",s,(False\(.*\)))/mark("\1",s,(False\2))/g'  >  ./$2
+s/mark("\(.*\)",s,(False\(.*\)))/mark("\1",s,(False\2))/g'  > ./$2
   "; $ ); [:xcpt~ "cap,env,bootstrap,i2py.sh" ]];
 
 
