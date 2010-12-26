@@ -3222,7 +3222,7 @@ r31 xor r31 to r31;
   "; $ ); [:xcpt~ "cap,env,tool,calc,syntax" ]];
     [:xtns~ `cap,env,bootstrap,smtx.py ~  ( "
 
-def syntax_s( a, s, e, c, n ):  return ( True, s, e-s, (c, a[1], n))
+def syntax_s( a, s, e, c, n ):  return ( True, True, s, e-s, (c, a[1], n))
 
   "; $ ); [:xcps~ "cap,env,bootstrap,smtx.py" ]];
 
@@ -3237,7 +3237,7 @@ def syntax_s( a, s, e, c, n ):  return ( True, s, e-s, (c, a[1], n))
 def line_s( a, s, e, c, n ):
   print fi[s:e] + " --> " + a[2][1]
   if len(a[1])>0:  registers[a[1][1][1]] = int(a[2][1])
-  return ( True, s, e-s, (c, a[2][1], n))
+  return ( True, True, s, e-s, (c, a[2][1], n))
   "; $ ); [:xcps~ "cap,env,bootstrap,smtx.py" ]];
 
 
@@ -3252,27 +3252,27 @@ def line_s( a, s, e, c, n ):
     [:xtnt~ `cap,env,bootstrap,smtx.py ~  ( "
 def nexpr_s( a, s, e, c, n ):
   if len(a[2]) > 1:
-    if a[2][1]=='-':  return ( True, s, e-s, (c, str(0 - int(a[3][1])) , n))
-    else:   return ( True, s, e-s, (c, a[3][1], n ))
-  else:  return ( True, s, e-s, (c, a[3][1], n ))
+    if a[2][1]=='-':  return ( True, True, s, e-s, (c, str(0 - int(a[3][1])) , n))
+    else:   return ( True, True, s, e-s, (c, a[3][1], n ))
+  else:  return ( True, True, s, e-s, (c, a[3][1], n ))
 
 def plu_s( a, s, e, c, n ):  return ( True, s, e-s, (c, a[1], n ))
 
-def itmexpr_s( a, s, e, c, n ):  return ( True, s, e-s, (c, a[2][1], n ))
+def itmexpr_s( a, s, e, c, n ):  return ( True, True, s, e-s, (c, a[2][1], n ))
 
-def addexpr_s( a, s, e, c, n ):  return ( True, s, e-s, (c, str(int(a[2][1]) + int(a[6][1])), n ))
+def addexpr_s( a, s, e, c, n ):  return ( True, True, s, e-s, (c, str(int(a[2][1]) + int(a[6][1])), n ))
 
-def subexpr_s( a, s, e, c, n ):  return ( True, s, e-s, (c, str(int(a[2][1]) - int(a[6][1])), n ))
+def subexpr_s( a, s, e, c, n ):  return ( True, True, s, e-s, (c, str(int(a[2][1]) - int(a[6][1])), n ))
 
-def mulexpr_s( a, s, e, c, n ):  return ( True, s, e-s, (c, str(int(a[2][1]) * int(a[6][1])), n ))
+def mulexpr_s( a, s, e, c, n ):  return ( True, True, s, e-s, (c, str(int(a[2][1]) * int(a[6][1])), n ))
 
-def divexpr_s( a, s, e, c, n ):  return ( True, s, e-s, (c, str(int(a[2][1]) / int(a[6][1])), n ))
+def divexpr_s( a, s, e, c, n ):  return ( True, True, s, e-s, (c, str(int(a[2][1]) / int(a[6][1])), n ))
 
-def vbl_s( a, s, e, c, n ):  return ( True, s, e-s, (c, str( registers[a[1][1]] ), n ))
+def vbl_s( a, s, e, c, n ):  return ( True, True, s, e-s, (c, str( registers[a[1][1]] ), n ))
 
-def parens_s( a, s, e, c, n ): return ( True, s, e-s, (c, a[3][1], n ))
+def parens_s( a, s, e, c, n ): return ( True, True, s, e-s, (c, a[3][1], n ))
 
-def build (v,s,l,a): return 'success'
+def build (v,m,s,l,a): return 'success'
   "; $ ); [:xcpt~ "cap,env,bootstrap,smtx.py" ]];
 
 
@@ -3645,7 +3645,7 @@ d
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def istring_s ( a, s, e, c, n ): 
-  return  ( True, s, e-s, (c,a[2][1].decode('string_escape'), n ))
+  return  ( True, True, s, e-s, (c,a[2][1].decode('string_escape'), n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3710,12 +3710,12 @@ def istring_s ( a, s, e, c, n ):
 def hexdigitsb_s ( a, s, e, c, n ):
  x=''
  if len(a[3])>1: x=a[3][1]
- return ( True, s, e-s, (c,chr(int(a[1][1]+a[2][1],16))+x, n ))
+ return ( True, True, s, e-s, (c,chr(int(a[1][1]+a[2][1],16))+x, n ))
 
 def hexdigitsl_s ( a, s, e, c, n ):
  x=''
  if len(a[3])>1: x=a[3][1]
- return ( True, s, e-s, (c,x+chr(int(a[1][1]+a[2][1],16)), n ))
+ return ( True, True, s, e-s, (c,x+chr(int(a[1][1]+a[2][1],16)), n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3802,8 +3802,8 @@ def hexdigitsl_s ( a, s, e, c, n ):
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def iphrase_s ( a, s, e, c, n ):  return  ( True, s, e-s, (c,a[1], a[3], n  ))
-def iphrasec_s ( a, s, e, c, n ):  return  ( True, s, e-s, a[3])
+def iphrase_s ( a, s, e, c, n ):  return  ( True, True, s, e-s, (c,a[1], a[3], n  ))
+def iphrasec_s ( a, s, e, c, n ):  return  ( True, True, s, e-s, a[3])
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3835,8 +3835,8 @@ def defn_s ( a, s, e, c, n ):
     context[a[6][1]]=a[14]
   else:
     print "anonymous definition!"
-  if len(a[2])>0: return ( True, s, e-s, (c,"", n ))
-  else: return ( True, s, e-s, (c,a[14], n ))
+  if len(a[2])>0: return ( True, True, s, e-s, (c,"", n ))
+  else: return ( True, True, s, e-s, (c,a[14], n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3862,7 +3862,7 @@ def defn_s ( a, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def dpr_s ( a, s, e, c, n ):
- return ( True, s, e-s, ({1:'pre'},a, n ))
+ return ( True, True, s, e-s, (c,a, n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3877,7 +3877,7 @@ def dpr_s ( a, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def dpo_s ( a, s, e, c, n ):
- return ( True, s, e-s, ({1:'post'},a, n ))
+ return ( True, True, s, e-s, (c,a, n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3946,8 +3946,8 @@ def dpo_s ( a, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def refr_s ( a, s, e, c, n ): 
-  if context.has_key(fi[s:e]): return ( True, s, e-s, (c, context[fi[s:e]], n ))
-  else: return (False, s, e-s, (c, fi[s:e], n))
+  if context.has_key(fi[s:e]): return ( True, True, s, e-s, (c, context[fi[s:e]], n ))
+  else: return (False, True, s, e-s, (c, fi[s:e], n))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4001,7 +4001,7 @@ def refr_s ( a, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def mrkr_s ( a, s, e, c, n ): 
-  global rseq ; rseq = rseq + 1;  return ( True, s, e-s, (c, rseq , n ))
+  global rseq ; rseq = rseq + 1;  return ( True, True, s, e-s, (c, rseq , n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4017,7 +4017,7 @@ def mrkr_s ( a, s, e, c, n ):
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def expand_s ( a, s, e, c, n ): return ( True, s, e-s, (c, "Expansion!", n ))
+def expand_s ( a, s, e, c, n ): return ( True, True, s, e-s, (c, "Expansion!", n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4051,7 +4051,7 @@ def expand_s ( a, s, e, c, n ): return ( True, s, e-s, (c, "Expansion!", n ))
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def tsq_s ( a, s, e, c, n ): return ( True, s, e-s, (c, fi[s:e], n ))
+def tsq_s ( a, s, e, c, n ): return ( True, True, s, e-s, (c, fi[s:e], n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4066,10 +4066,10 @@ def tsq_s ( a, s, e, c, n ): return ( True, s, e-s, (c, fi[s:e], n ))
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def typeref_s ( a, s, e, c, n ): return ( True, s, e-s, (c, anot( typ( deref (a[0] ))), n ))
+def typeref_s ( a, s, e, c, n ): return ( True, True, s, e-s, (c, anot( typ( deref (a[0] ))), n ))
 spcs = "                                                                                                   "
-def build (v,s,l,a): return (rbuild (v,s,l,a,0))
-def rbuild (v,s,l,a,d):
+def build (v,m,s,l,a): return (rbuild (v,m,s,l,a,0))
+def rbuild (v,m,s,l,a,d):
  print spcs[0:(d*2)] + a[len(a)-1]+" ("+str(len(a)-2)+")"
  if (a[len(a)-1]=='integer') or (a[len(a)-1]=='floatnum') or (a[len(a)-1]=='nnum') or (a[len(a)-1]=='mrkr'):
    o=''
@@ -4078,7 +4078,7 @@ def rbuild (v,s,l,a,d):
    for i in range (len(a)):
     if (i > 0) and (i < (len(a)-1)):
      if type(a[i])==type(()):
-       o = o + rbuild (v,s,l,a[i],d+1)
+       o = o + rbuild (v,m,s,l,a[i],d+1)
      if type(a[i])==type(""):
        o = o + a[i]
  return o
@@ -4452,14 +4452,19 @@ s/\[\:newp.\]./\\newpage /' > cap.latex; echo "\\end{document}" >> cap.latex; \
     [:xtnt~ `cap,env,bootstrap,pro.py ~  ( "
 import sys
 fi = file(sys.argv[1]).read(); h = {}
-def mark( p, l, t ): x = p +"-" + str(l);  h[x]=t; return t
-def been( p, l): return h.has_key( p +"-" + str(l) )
+def mark( p, l, t ):
+  if t[1]:  x = p +"-" + str(l);  h[x]=t; return t
+  else:
+    if not t[0]:  x = p +"-" + str(l);  h[x]=t; return t
+  return t
+def been(c, p, l):
+ return h.has_key( p +"-" + str(l) )
 def was(  p, l): return h[ p +"-" + str(l) ]
 
 def cm( c, s, x ):
   if s < len(fi):
-    if fi[s] == c:    return ( True, s, 1, ( x, fi[s], "cm") )
-  return ( False, s, 0, (x, "", "cm") )
+    if fi[s] == c:    return ( True, True, s, 1, ( x, fi[s], "cm") )
+  return ( False, True, s, 0, (x, "", "cm") )
 registers={}
 context={}
 rseq = 5
@@ -4545,7 +4550,7 @@ s/'\(.\)'/ '\1' /g"        |  sed -e '
     [:para~ "Turn ibnf alternatives into bash else-if clauses:"];
 
     [:xtnt~ `cap,env,bootstrap,i2py.sh ~  ( "
-s/ | / ( s )insertnewline    if not met: (met, ts, tl, ta ) = /g' |  sed -e '
+s/ | / ( s )insertnewline    if not met: (met, mem, ts, tl, ta ) = /g' |  sed -e '
   "; $ ); [:xcpt~ "cap,env,bootstrap,i2py.sh" ]];
 
     [:para~ "Turn ibnf  definitions into bash functions:"];
@@ -4557,17 +4562,17 @@ s/^ *\([a-z]*_p\) *\([?:]\) *\(.*\); *$/def \1( s )\2\3}\2/' |  sed -e '
     [:para~ "Prepend an if keyword for ibnf alternative bash functions:"];
 
     [:xtnt~ `cap,env,bootstrap,i2py.sh ~  ( "
-s/( s )?/\( s ):insertnewline  if been("!1!",s): return was("!2!",s)~:~/'  |  sed -e '
+s/( s )?/\( s ):insertnewline  if been(c,"!1!",s): return was("!2!",s)~:~/'  |  sed -e '
 s/~:~/insertnewline  else:insertnewline~:~/'  |  sed -e '
-s/~:~/    mark("!3!",s,(False,s,0,(c,"",""))); met = Falseinsertnewline~:~/'  |  sed -e '
-s/~:~/    if not met: (met, ts, tl, ta) = /'  |  sed -e '
+s/~:~/    mark("!3!",s,(False,True,s,0,(c,"",""))); met = Falseinsertnewline~:~/'  |  sed -e '
+s/~:~/    if not met: (met, mem, ts, tl, ta) = /'  |  sed -e '
   "; $ ); [:xcpt~ "cap,env,bootstrap,i2py.sh" ]];
 
     [:para~ "Create "if not met"  statements for ibnf alternative bash functions:"];
 
     [:xtnt~ `cap,env,bootstrap,i2py.sh ~  ( "
-s/}?/ ( s )insertnewline    if not met:  return mark("!4!",s,(False,s,0,(c,"","")))}?/'  |  sed -e '
-s/}?/insertnewline    else:        return mark("!5!",s,(met,s,tl,ta))/'   |  sed -e '
+s/}?/ ( s )insertnewline    if not met:  return mark("!4!",s,(False,True,s,0,(c,"","")))}?/'  |  sed -e '
+s/}?/insertnewline    else:        return mark("!5!",s,(met,mem,s,tl,ta))/'   |  sed -e '
 s/^def \(.*\)_p\(.*\)!1!\(.*\)!2!\(.*\)!3!\(.*\)!4!\(.*\)!5!\(.*\)$/def \1_p\2\1\3\1\4\1\5\1\6\1\7/'  |  sed -e '
 s/,s) *( s )/,s)/g'  |  sed -e '
 s/_p ( s )/_p( s )/g'  |  sed -e '
@@ -4580,17 +4585,17 @@ s/_p  ( s )/_p( s )/g'  |  sed -e '
 s/def \(.*\)_p( s ):\(.*\)}:/def \1_p( s ):!1!"\1"!2!"\1"!3!"\1"!4!\2!5!"\1"!6!\1!7!"\1"!8!/'   |  sed -e '
 s/_p /_p ( ts+tl )insertnewline    !=!/g'        |  sed -e '
 s/ ,s) / ,(ts+tl))insertnewline    !=!/g'        |  sed -e '
-s/!1!/insertnewline  if been(/'        |  sed -e '
+s/!1!/insertnewline  if been(c,/'        |  sed -e '
 s/!2!/,s): return was(/'        |  sed -e '
 s/!3!/,s)insertnewline  else:insertnewline    mark(/'        |  sed -e '
-s/!4!/,s,(False,s,0,(c,"","X"))); ok=True; ts=s; tl=0; a={0: (c,"","X")}; n=0insertnewline    !=!/'  |  sed -e '
+s/!4!/,s,(False,True,s,0,(c,"","X"))); ok=True; ts=s; tl=0; a={0: (c,"","X")}; n=0insertnewline    !=!/'  |  sed -e '
 s/!=! */!=!/g'        |  sed -e '
 s/!=!!5!/if ok: return mark(/'        |  sed -e '
 s/!6!/,s, /'        |  sed -e '
 s/!7!/_s( a, s, ts+tl) )insertnewline    return mark(/'        |  sed -e '
-s/!8!/,s,(False,s,0,(c,"","")))/'        |  sed -e '
-s/!=!\./if ok: n=n+1; (nok, ts, tl, a[n]) = /g'        |  sed -e '
-s/!=!/if ok: n=n+1; (ok, ts, tl, a[n]) = /g'        |  sed -e "
+s/!8!/,s,(False,True,s,0,(c,"","")))/'        |  sed -e '
+s/!=!\./if ok: n=n+1; (nok, mem,ts, tl, a[n]) = /g'        |  sed -e '
+s/!=!/if ok: n=n+1; (ok, mem, ts, tl, a[n]) = /g'        |  sed -e "
   "; $ ); [:xcpt~ "cap,env,bootstrap,i2py.sh" ]];
 
     [:para~ "Put semicolons after parsing  calls and match calls in sequences then remove the colons:"];
@@ -4627,7 +4632,7 @@ import sys
 fi = open(sys.argv[1], "r")
 fo = open(sys.argv[2], "w+")
 line = fi.readline()
-params = "_s( a, s, e, c, n ):  return ( True, s, e-s, (c,"
+params = "_s( a, s, e, c, n ):  return ( True, True, s, e-s, (c,"
 tail = "], n ))"
 
 while line:
@@ -4673,13 +4678,13 @@ cp $1 $2
 #fo.close()
 
 
-(v,s,l,a) = start_p( 0, {} )
+(v,m,s,l,a) = start_p( 0, ('X','Y') )
 if v: 
   print "Parsed "+a[len(a)-1]+" OK"
   print "tree:"
   print a
   print "result:"
-  print build (v,s,l,a)
+  print build (v,m,s,l,a)
   print "definitions:"
   print context
 else: print "Failed to Parse"
