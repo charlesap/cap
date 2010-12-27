@@ -3836,7 +3836,7 @@ def defn_s ( a, m, s, e, c, n ):
   else:
     print "anonymous definition!"
   if len(a[2])>0: return ( True, True, s, e-s, (c,"", n ))
-  else: return ( True, True, s, e-s, (c,a[14], n ))
+  else: return ( True, m, s, e-s, (c,a[14], n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3851,6 +3851,21 @@ def defn_s ( a, m, s, e, c, n ):
    "; $ ); [:xcpe~ "ibnf example" ]];
 
 
+    [:mnot~ "Definition items" ] ;
+    [:para~ "Definition items..."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
+
+    ddnm  =  dnm ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
+
+def ddnm_s ( a, m, s, e, c, n ):
+ return ( True, False, s, e-s, ((a[1][1],(c[1])),a[1], n ))
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
+
     [:mnot~ "definition preparation" ] ;
     [:para~ "Definitions have semantic preparation required."];
 
@@ -3862,7 +3877,7 @@ def defn_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def dpr_s ( a, m, s, e, c, n ):
- return ( True, True, s, e-s, (c,a, n ))
+ return ( True, False, s, e-s, (('<>',c),a, n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3877,7 +3892,8 @@ def dpr_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def dpo_s ( a, m, s, e, c, n ):
- return ( True, True, s, e-s, (c,a, n ))
+ print c
+ return ( True, False, s, e-s, (c[1], a, n ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4461,12 +4477,22 @@ def been(c, p, l):
  if h.has_key( p +"-" + str(l) ): return h[p +"-" + str(l)][1]
  else:  return False
 
-def was(  p, l): return h[ p +"-" + str(l) ]
+def was(c,  p, l): 
+ ( v, m, s, l, a ) = h[ p +"-" + str(l) ]
+ ( x, a, n ) = a
+ return (v, m, s, l, ( c, a, n )) 
 
-def cm( c, s, x ):
+def cm( ch, s, c ):
   if s < len(fi):
-    if fi[s] == c:    return ( True, True, s, 1, ( x, fi[s], "cm") )
-  return ( False, True, s, 0, (x, "", "cm") )
+    if fi[s] == ch:    return ( True, True, s, 1, ( c, fi[s], "cm") )
+  return ( False, True, s, 0, (c, "", "cm") )
+
+def andmemo( m ):
+  r = True
+  for i in m:
+    if not m[i]: r = False
+  return r
+
 registers={}
 context={}
 rseq = 5
@@ -4564,7 +4590,7 @@ s/^ *\([a-z]*_p\) *\([?:]\) *\(.*\); *$/def \1( s )\2\3}\2/' |  sed -e '
     [:para~ "Prepend an if keyword for ibnf alternative bash functions:"];
 
     [:xtnt~ `cap,env,bootstrap,i2py.sh ~  ( "
-s/( s )?/\( s ):insertnewline  if been(c,"!1!",s): return was("!2!",s)~:~/'  |  sed -e '
+s/( s )?/\( s ):insertnewline  if been(c,"!1!",s): return was( c, "!2!",s)~:~/'  |  sed -e '
 s/~:~/insertnewline  else:insertnewline~:~/'  |  sed -e '
 s/~:~/    mark("!3!",s,(False,True,s,0,(c,"",""))); met = Falseinsertnewline~:~/'  |  sed -e '
 s/~:~/    if not met: (met, mem, ts, tl, ta) = /'  |  sed -e '
@@ -4588,13 +4614,13 @@ s/def \(.*\)_p( s ):\(.*\)}:/def \1_p( s ):!1!"\1"!2!"\1"!3!"\1"!4!\2!5!"\1"!6!\
 s/_p /_p ( ts+tl )insertnewline    !=!/g'        |  sed -e '
 s/ ,s) / ,(ts+tl))insertnewline    !=!/g'        |  sed -e '
 s/!1!/insertnewline  if been(c,/'        |  sed -e '
-s/!2!/,s): return was(/'        |  sed -e '
+s/!2!/,s): return was( c, /'        |  sed -e '
 s/!3!/,s)insertnewline  else:insertnewline    mark(/'        |  sed -e '
 s/!4!/,s,(False,True,s,0,(c,"","X"))); ok=True; ts=s; tl=0; a={0: (c,"","X")}; mem={0:True}; n=0insertnewline    !=!/'  |  sed -e '
 s/!=! */!=!/g'        |  sed -e '
 s/!=!!5!/if ok: return mark(/'        |  sed -e '
 s/!6!/,s, /'        |  sed -e '
-s/!7!/_s( a, mem, s, ts+tl) )insertnewline    return mark(/'        |  sed -e '
+s/!7!/_s( a, andmemo(mem), s, ts+tl) )insertnewline    return mark(/'        |  sed -e '
 s/!8!/,s,(False,True,s,0,(c,"","")))/'        |  sed -e '
 s/!=!\./if ok: n=n+1; (nok, mem[n],ts, tl, a[n]) = /g'        |  sed -e '
 s/!=!/if ok: n=n+1; (ok, mem[n], ts, tl, a[n]) = /g'        |  sed -e "
