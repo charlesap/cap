@@ -3831,9 +3831,7 @@ def iphrasec_s ( a, m, s, e, c, n ):  return  ( True, True, s, e-s, c, a[3])
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def defn_s ( a, m, s, e, c, n ):
-  (c0,c1,c2)=c
-#  context[c1]=a[14]
-  c0[c1]=a[14]  
+  (c0,c1,c2)=c; c0[c1]=a[14]  
   if len(a[2][1])>0: return ( True, False, s, e-s, (c0,c2[0],c2[1]),(n, "" ))
   else:   return ( True, False, s, e-s, (c0,c2[0],c2[1]),(n,a[14] ))
 
@@ -3861,8 +3859,7 @@ def defn_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def ddnm_s ( a, m, s, e, c, n ):
- (c0,c1,c2)=c
- return ( True, False, s, e-s, (c0,a[1][1],c2),(n,fi[s:e] ))
+ (c0,c1,c2)=c; return ( True, False, s, e-s, (c0,a[1][1],c2),(n,fi[s:e] ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3877,26 +3874,8 @@ def ddnm_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def dpr_s ( a, m, s, e, c, n ):
- (c0,c1,c2)=c
- global dseq ; dseq = dseq + 1  
+ (c0,c1,c2)=c; global dseq ; dseq = dseq + 1  
  return ( True, False, s, e-s, (c0,'<'+str(dseq)+'>',(c1,c2)),(n, a ))
-
-  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
-
-    [:mnot~ "definition preparation" ] ;
-    [:para~ "Definitions require cleanup."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
-
-    dpo     =  ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
-    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
-
-def dpo_s ( a, m, s, e, c, n ):
- (c0,c1,c2)=c
- print c
- return ( True, False, s, e-s, (c0,c2[0],c2[1]),(n, a ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4020,7 +3999,9 @@ def refr_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def mrkr_s ( a, m, s, e, c, n ): 
-  global mseq ; mseq = mseq + 1;  return ( True, True, s, e-s, c,(n, mseq  ))
+  (c0,c1,c2)=c; global mseq ; mseq = mseq + 1
+  nm='>'+str(c1)+'<'
+  c0[nm]=(''); return ( True, False, s, e-s, (c0, c1, c2),(n, nm  ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4036,7 +4017,14 @@ def mrkr_s ( a, m, s, e, c, n ):
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def expand_s ( a, m, s, e, c, n ): return ( True, True, s, e-s, c,(n, "Expansion!" ))
+def expand_s ( a, m, s, e, c, n ): 
+  (c0,c1,c2)=c;  key=">"+a[3][1]+"<"
+  print "exapnding "+key
+  if c0.has_key(key):
+    c0[key]=a[7];  return ( True, False, s, e-s, (c0,c1,c2),(n, '' ))
+  else:
+    print "expansion not found!"
+    return ( False, False, s, e-s, c,(n, '' ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4094,7 +4082,11 @@ def build (v,m,s,l,c,a): return (rbuild (v,m,s,l,c,a,0))
 def rbuild (v,m,s,l,c,a,d):
  print spcs[0:(d*2)] + a[0]+" ("+str(len(a)-1)+")"
  if (a[0]=='integer') or (a[0]=='floatnum') or (a[0]=='nnum') or (a[0]=='mrkr'):
-   o=''
+   if a[0]=='mrkr':
+#     o=str(c[0][a[1]])
+     o = rbuild (v,m,s,l,c,c[0][a[1]],d+1)     
+   else:
+     o=''
  else:
    o=''
    for i in range (len(a)):
