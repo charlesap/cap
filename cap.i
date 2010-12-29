@@ -3825,18 +3825,17 @@ def iphrasec_s ( a, m, s, e, c, n ):  return  ( True, True, s, e-s, c, a[3])
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    defn = dpr .sq w '[' w .ddnm w ':' w .tsq w '~' w .istmt w ']' dpo ; 
+    defn = dpr .sq w '[' w .ddnm w ':' w .tsq w '~' w .istmt w ']' ; 
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def defn_s ( a, m, s, e, c, n ):
-  if(a[6][1]!=''):
-    context[a[6][1]]=a[14]
-  else:
-    print "anonymous definition!"
-  if len(a[2])>0: return ( True, True, s, e-s, c,(n, "" ))
-  else: return ( True, m, s, e-s, c,(n,a[14] ))
+  (c0,c1,c2)=c
+#  context[c1]=a[14]
+  c0[c1]=a[14]  
+  if len(a[2][1])>0: return ( True, False, s, e-s, (c0,c2[0],c2[1]),(n, "" ))
+  else:   return ( True, False, s, e-s, (c0,c2[0],c2[1]),(n,a[14] ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3862,7 +3861,8 @@ def defn_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def ddnm_s ( a, m, s, e, c, n ):
- return ( True, False, s, e-s, (a[1][1],(c[1])),(n,fi[s:e] ))
+ (c0,c1,c2)=c
+ return ( True, False, s, e-s, (c0,a[1][1],c2),(n,fi[s:e] ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3877,7 +3877,9 @@ def ddnm_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def dpr_s ( a, m, s, e, c, n ):
- return ( True, False, s, e-s, ('<>',c),(n, a ))
+ (c0,c1,c2)=c
+ global dseq ; dseq = dseq + 1  
+ return ( True, False, s, e-s, (c0,'<'+str(dseq)+'>',(c1,c2)),(n, a ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3892,8 +3894,9 @@ def dpr_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def dpo_s ( a, m, s, e, c, n ):
+ (c0,c1,c2)=c
  print c
- return ( True, False, s, e-s, c[1],(n, a ))
+ return ( True, False, s, e-s, (c0,c2[0],c2[1]),(n, a ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3962,8 +3965,8 @@ def dpo_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def refr_s ( a, m, s, e, c, n ): 
-  if context.has_key(fi[s:e]): return ( True, True, s, e-s, c,(n, context[fi[s:e]]))
-  else: return (False, True, s, e-s, c,(n, fi[s:e]))
+  if c[0].has_key(fi[s:e]): return ( True, False, s, e-s, c,(n, c[0][fi[s:e]]))
+  else: return (False, False, s, e-s, c,(n, fi[s:e]))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4017,7 +4020,7 @@ def refr_s ( a, m, s, e, c, n ):
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def mrkr_s ( a, m, s, e, c, n ): 
-  global rseq ; rseq = rseq + 1;  return ( True, True, s, e-s, c,(n, rseq  ))
+  global mseq ; mseq = mseq + 1;  return ( True, True, s, e-s, c,(n, mseq  ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4083,8 +4086,11 @@ def tsq_s ( a, m, s, e, c, n ): return ( True, True, s, e-s, c,(n, fi[s:e] ))
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
 def typeref_s ( a, m, s, e, c, n ): return ( True, True, s, e-s, c,(n, anot( typ( deref (a[0] ))) ))
+
 spcs = "                                                                                                   "
+
 def build (v,m,s,l,c,a): return (rbuild (v,m,s,l,c,a,0))
+
 def rbuild (v,m,s,l,c,a,d):
  print spcs[0:(d*2)] + a[0]+" ("+str(len(a)-1)+")"
  if (a[0]=='integer') or (a[0]=='floatnum') or (a[0]=='nnum') or (a[0]=='mrkr'):
@@ -4096,7 +4102,7 @@ def rbuild (v,m,s,l,c,a,d):
      if type(a[i])==type(()):
        o = o + rbuild (v,m,s,l,c,a[i],d+1)
      if type(a[i])==type(""):
-       o = o + a[i]
+       o = o +a[i]
  return o
 
 
@@ -4495,7 +4501,8 @@ def andmemo( m ):
 
 registers={}
 context={}
-rseq = 5
+mseq = 0
+dseq = 1
 
 #fo = open(sys.argv[2], "w+")
   "; $ ); [:xcpt~ "cap,env,bootstrap,pro.py" ]];
@@ -4706,7 +4713,7 @@ cp $1 $2
 #fo.close()
 
 
-(v,m,s,l,c,a) = start_p( 0, ('<>') )
+(v,m,s,l,c,a) = start_p( 0, ({},'<1>','<0>') )
 if v: 
   print "Parsed "+a[0]+" OK"
   print "tree:"
@@ -4715,6 +4722,9 @@ if v:
   print build (v,m,s,l,c,a)
   print "definitions:"
   print context
+  print "Final context:"
+  for i in c[0]:
+    print str(i) +" is " + str(c[0][i])
 else: print "Failed to Parse"
   "; $ ); [:xcpt~ "cap,env,bootstrap,epi.py" ]];
 
