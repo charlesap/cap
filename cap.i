@@ -33,36 +33,36 @@
 
     [:para~ "Finally, it is hoped that ";[:mono~"cap" ] ; " embodies a pleasant system to use for general computing tasks."]; 
 
-  )];["Requirements":([^cap^sect:capml~])~(
-    [:para~ " ";[:itlc~"Requirement --- Track Requirements." ] ; " ";[:flush~];" 01/01/2009 \checkmark "]; 
+  )];["Goals":([^cap^sect:capml~])~(
+    [:para~ " ";[:itlc~"Goal --- Track Goals." ] ; " ";[:flush~];" 01/01/2009 \checkmark "]; 
 
-    [:mnot~ "requirements" ] ;
-    [:para~ "When goals (or requirements) are determined at the outset of a project, progress is tracked, and fulfillment is tested,
+    [:mnot~ "Goals" ] ;
+    [:para~ "When requirements (or goals) are determined at the outset of a project, progress is tracked, and fulfillment is tested,
              a project is more likely to be successfully completed more quickly and with greater assurance of satisfactory execution
-             than it would be without establishing and tracking requirements";[:ftnt~"Barry W. Boehm, A Spiral Model of Software Development and Enhancement., ACM SIGSOFT Software Engineering Notes 11, 1986" ] ; "."];
+             than it would be without establishing and tracking goals";[:ftnt~"Barry W. Boehm, A Spiral Model of Software Development and Enhancement., ACM SIGSOFT Software Engineering Notes 11, 1986" ] ; "."];
  
-    [:para~ "In ";[:mono~"cap" ] ; " the requirements are explicitly included, tracked, and tested or acknowledged as having been met
+    [:para~ "In ";[:mono~"cap" ] ; " the goals are explicitly included, tracked, and tested or acknowledged as having been met
              from within the literate programming text of ";[:mono~"cap" ] ; " (this document)."]; 
 
-    [:para~ "The requirements mirror the organizational structure as each chapter, section, and subsection provides functionality
-             needed by the system. Section requirements are found at the beginning of the section. Goals for the 
+    [:para~ "The goals mirror the organizational structure as each chapter, section, and subsection provides functionality
+             needed by the system. Section goals are found at the beginning of the section. Goals for the 
              whole project are listed  here:"]; 
 
 `cap,doc ~ ( [req:sdoc~ $ ]; $ );
 
     [:stxt~`cap,doc,req ~ ( 
 
-    ["Requirements for the Computer Applications Platform":ssct~(
+    ["Goals for the Computer Applications Platform":ssct~(
 
-    [:para~ " ";[:itlc~"Requirement a --- Provide functionality comparable to the compiler, operating system, and applications of a conventional platform used for general computing tasks." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal a --- Provide functionality comparable to the compiler, operating system, and applications of a conventional platform used for general computing tasks." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
-    [:para~ "Sub-requirements specify specific goals that must be met to satisfy the main requirement, such as:"]; 
+    [:para~ "Sub-goals specify specific goals that must be met to satisfy the main Goal, such as:"]; 
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement a.1 --- Execute on conventional hardware." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal a.1 --- Execute on conventional hardware." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
@@ -70,31 +70,31 @@
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement a.2 --- Re-create own executable structure from source text." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal a.2 --- Re-create own executable structure from source text." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
-    [:para~ "The system should be self-reliant for its own development. The above requirement also captures the functionality of the typical compiler in existing systems."]; 
+    [:para~ "The system should be self-reliant for its own development. The above Goal also captures the functionality of the typical compiler in existing systems."]; 
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement a.3 --- Provide operating system features such as process isolation, scheduling, storage and retrieval, internetworking, input/output, and computer resource management." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal a.3 --- Provide operating system features such as process isolation, scheduling, storage and retrieval, internetworking, input/output, and computer resource management." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
-    [:para~ "The above requirement encapsulates operating system activities."]; 
+    [:para~ "The above Goal encapsulates operating system activities."]; 
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement a.4 --- Build and execute additional programs from additional source texts." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal a.4 --- Build and execute additional programs from additional source texts." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
-    [:para~ "The above requirement provides for the development of applications for the system."]; 
+    [:para~ "The above Goal provides for the development of applications for the system."]; 
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement a.5 --- Safely execute machine code compiled by other systems." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal a.5 --- Safely execute machine code compiled by other systems." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
@@ -103,29 +103,29 @@
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement b --- Demonstrate holistic coding." ] ; " ";[:flush~];" 01/23/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal b --- Demonstrate holistic coding." ] ; " ";[:flush~];" 01/23/2009 \checkmark "]; 
 
     $);[:scpt~ " " ]];
 
     [:mnot~ "holistic coding" ] ;
     [:para~ "The incorporation and incremental development of software 
              development";[:ftnt~"Frederick P. Brooks, Jr., No Silver Bullet, 1986" ] ; " extrinsic aspects
-             that can be captured in document form is called holistic coding in ";[:mono~"cap" ] ; ". The requirements of a project are 
+             that can be captured in document form is called holistic coding in ";[:mono~"cap" ] ; ". The Goals of a project are 
              one such aspect."];  
 
     [:bnot~ "Tenet the Second: Code Holistically." ] ;
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement b.1 --- Produce documentation, including a summary of requirements and project status from the source text." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal b.1 --- Produce documentation, including a summary of Goals and project status from the source text." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
-    [:para~ "The above requirement integrates documentation of the system with the system."]; 
+    [:para~ "The above Goal integrates documentation of the system with the system."]; 
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement b.2 --- Integrate defect tracking, unit tests, regression tests, and a summary of test results with the source text." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal b.2 --- Integrate defect tracking, unit tests, regression tests, and a summary of test results with the source text." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
@@ -135,7 +135,7 @@
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement b.3 --- Integrate version and revision control as well as software distribution with the source text." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal b.3 --- Integrate version and revision control as well as software distribution with the source text." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
@@ -149,19 +149,19 @@
 
     [:stxt~`cap,doc,req ~ ( 
 
-    [:para~ " ";[:itlc~"Requirement c --- Instrument source texts for localization and internationalization." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal c --- Instrument source texts for localization and internationalization." ] ; " ";[:flush~];" unmet "]; 
 
     $);[:scpt~ " " ]];
 
 
-    [:para~ "The preceding requirements outlined in boxes in this section (1.1) are requirements for the system as a whole but they are not all
-             of the requirements for ";[:mono~"cap" ] ; ". Like any large project this effort has been subdivided into smaller parts so
+    [:para~ "The preceding Goals outlined in boxes in this section (1.1) are Goals for the system as a whole but they are not all
+             of the Goals for ";[:mono~"cap" ] ; ". Like any large project this effort has been subdivided into smaller parts so
              that the system may be developed incrementally. Each chapter, section, and subsection is devoted to a specific aspect of 
-             ";[:mono~"cap" ] ; " functionality and contains its own requirements, and those requirements taken
+             ";[:mono~"cap" ] ; " functionality and contains its own Goals, and those Goals taken
              all together form a complete set which is listed in Appendix I."]; 
 
-    [:para~ "The requirements, the code, and the chapters and sections of explanatory text are all developed incrementally and together, with
-             later chapters and sections building on features and concepts introduced in earlier chapters and sections. Requirements, tests,
+    [:para~ "The Goals, the code, and the chapters and sections of explanatory text are all developed incrementally and together, with
+             later chapters and sections building on features and concepts introduced in earlier chapters and sections. Goals, tests,
              and other extrinsic matters of software development are introduced in the text where they are relevant but may also be summarized
              elsewhere and expanded upon later in the text. This incremental
              method of development is intended to make the entire system easier to understand and maintain."]; 
@@ -173,7 +173,7 @@
 
   )];["License":([^cap^sect:capml~])~(
 
-    [:para~ " ";[:itlc~"Requirement --- Select License." ] ; " ";[:flush~];" 01/23/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Select License." ] ; " ";[:flush~];" 01/23/2009 \checkmark "]; 
 
     [:mnot~ "open source" ] ;
     [:para~ "Software can be copyrighted, and any work intended for distribution should have a statement on the rights reserved
@@ -188,7 +188,7 @@
 
     [:xtne~ `cap,doc,literaltext ~  ( "
 
-Copyright (c) 2009 Charles Perkins
+Copyright (c) 2009-2012 Charles Perkins
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -224,13 +224,13 @@ OTHER DEALINGS IN THE SOFTWARE.
 
   )];["Project and Sub-Project Status":([^cap^sect:capml~])~(
 
-    [:para~ " ";[:itlc~"Requirement --- Track Project Status." ] ; " ";[:flush~];" 01/01/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Track Project Status." ] ; " ";[:flush~];" 01/01/2009 \checkmark "]; 
 
     [:para~ "A large project benefits from being broken down into manageable sub-projects. In  ";[:mono~"cap" ] ; " 
              each sub-project has its own chapter and each chapter provides concepts and features that the next chapters may build upon."]; 
 
     [:para~ "The complete Computer Applications Platform 0th edition will be presented in the following chapters, including sub-sub-projects and
-            requirements met:"]; 
+            Goals met:"]; 
 
     [:stxt~`cap,doc,req ~ ( 
 
@@ -289,7 +289,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
       [:skip~];
     [:para~ "Appendix I ";[:flush~];"
-        Requirements.
+        Goals.
              ";[:flush~];" 79 --- --- --- --- ---
               "]; 
 
@@ -327,7 +327,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
       [:skip~];
 
-    [:para~ "1.1 ";[:flush~];" Requirements.
+    [:para~ "1.1 ";[:flush~];" Goals.
              ";[:flush~];"  6 ------------ 2/12
              "]; 
 
@@ -376,7 +376,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
   )];["Structure, Syntax, and Values":sect~(
 
-    [:para~ " ";[:itlc~"Requirement --- Provide Fundamental Structure." ] ; " ";[:flush~];" 07/01/2008 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Provide Fundamental Structure." ] ; " ";[:flush~];" 07/01/2008 \checkmark "]; 
 
 
     [:mnot~ "structure," ] ;
@@ -698,7 +698,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
   )];["Machine Architecture and Machine Code":sect~(
 
-    [:para~ " ";[:itlc~"Requirement --- Declare Machine Codes for Common Architectures." ] ; " ";[:flush~];" in process"]; 
+    [:para~ " ";[:itlc~"Goal --- Declare Machine Codes for Common Architectures." ] ; " ";[:flush~];" in process"]; 
 
     [:para~ "The code in the previous section made increasingly refined divisions of abstract 
              concepts moving from the general to the specific (e.g. from the ";[:mono~"cap" ] ; " system 
@@ -797,7 +797,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
       ["Macro Expansion and Processor Registers":sbsc~(
 
-    [:para~ " ";[:itlc~"Requirement --- Define CPU general purpose registers." ] ; " ";[:flush~];"04/14/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Define CPU general purpose registers." ] ; " ";[:flush~];"04/14/2009 \checkmark "]; 
 
     [:mnot~ "processor architecture," ] ;
     [:mnot~ "machine code" ] ;
@@ -1118,7 +1118,7 @@ mmix      |t| (   8   ;  256  ;  1 ;    0  ;  0 ;  0   ));
       [])];
 
       ["No Operation, Return from Subroutine":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define No Operation, Return Instructions." ] ; " ";[:flush~];"04/15/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Define No Operation, Return Instructions." ] ; " ";[:flush~];"04/15/2009 \checkmark "]; 
 
     [:mnot~ "constants" ] ;
     [:para~ "Computer programs are fundamentally built of machine instructions. For each machine instruction
@@ -1228,7 +1228,7 @@ mmix (c) |o|( 0XFD000000 ; 0XF8000000 ));
       [])];
 
       ["Register Integer Operations":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Register Integer Operations." ] ; " ";[:flush~];"04/17/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Register Integer Operations." ] ; " ";[:flush~];"04/17/2009 \checkmark "]; 
 
     [:para~ "The register integer operations such as shift, add, subtract, etc. will use different instruction formats, specialized for each architecture and for 
              register-register-immediate (r-r-i, e.g. ";[:mono~"r1 from r1 shl 8" ] ; ") or register-register-register (r-r-r,  
@@ -1369,7 +1369,7 @@ mmix (r;i)(s;u) |o|( 0X22000000; 0X1A000000; 0X26000000; 0X1E000000));
       [])];
 
       ["Register Boolean Operations":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Register Boolean Operations." ] ; " ";[:flush~];"04/17/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Register Boolean Operations." ] ; " ";[:flush~];"04/17/2009 \checkmark "]; 
 
     [:para~ "The register boolean operations will reuse some of the integer operation definitions, and introduce some more: "];
 
@@ -1431,7 +1431,7 @@ mmix - 33 10 10 08  SLU $16,$16,8     C6 10 10 10   XOR $16,$16,$16
       [])];
 
       ["Load Immediate to Register":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Load Immediate to Register." ] ; " ";[:flush~];"04/17/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Load Immediate to Register." ] ; " ";[:flush~];"04/17/2009 \checkmark "]; 
 
     [:mnot~ "immediate values" ] ;
     [:para~ "A routine of machine code instructions may require values up to the size of a machine register to be immediately 
@@ -1532,7 +1532,7 @@ ldti 0X11223344;
 
 
        ["Jumps and Calls to absolute addresses":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Jump and Call Instructions." ] ; " ";[:flush~];"04/20/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Jump and Call Instructions." ] ; " ";[:flush~];"04/20/2009 \checkmark "]; 
 
     [:para~ "The above ";[:mono~"no operation" ] ; " and
              ";[:mono~"return from subroutine" ] ; " definitions have values that are the same regardless of how or where they are used. For definitions which have
@@ -1661,7 +1661,7 @@ mmix |o|(( 0X9F101000             );( 0XBF001000  )));
 
 
       ["Relative Jump, Relative Subroutine Call":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Relative Jump and Call Instructions." ] ; " ";[:flush~];"04/21/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Relative Jump and Call Instructions." ] ; " ";[:flush~];"04/21/2009 \checkmark "]; 
 
     [:mnot~ "macro computation" ] ;
     [:para~ "For a relative jump to another binary code location, the definition must determine the
@@ -1819,7 +1819,7 @@ mmix |o|(((mmixjop o ); o      );((mmixpjop o ); o )));
       [])];
 
       ["Register Move":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Register Move Instructions." ] ; " ";[:flush~];"04/23/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Register Move Instructions." ] ; " ";[:flush~];"04/23/2009 \checkmark "]; 
 
     [:para~ "Binary code for moving values between registers in the x86l architecture is as simple to construct as a jump definition, but 
              providing a separate
@@ -1882,7 +1882,7 @@ tmp to r5;
       [])];
 
       ["Register Load / Store ":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Register To Memory Instructions." ] ; " ";[:flush~];" 05/05/2009 \checkmark  "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Register To Memory Instructions." ] ; " ";[:flush~];" 05/05/2009 \checkmark  "]; 
 
     [:para~ "The load and store instructions for each architecture share some common characteristics.
              A couple of tables collect the particulars of how each architecture encodes its instructions, a 'build-load-store' definition describes 
@@ -2021,7 +2021,7 @@ load b8 to acc via frm offset 0;
 
 
       ["Integer Register Operations":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Integer Register Operations." ] ; " ";[:flush~];" partial "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Integer Register Operations." ] ; " ";[:flush~];" partial "]; 
 
     [:para~ "There are a common set of intger register operations that most architectures support. As with register loads and
              stores, these operations are composed in a regular way. Some tables will collate specific encodings, construction definitions will
@@ -2134,7 +2134,7 @@ r31 xor r31 to r31;
       [])];
 
       ["Stack Oprerations":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Stack Operation Instructions." ] ; " ";[:flush~];"  01/30/2009 \checkmark"]; 
+    [:para~ " ";[:itlc~"Goal --- Define Stack Operation Instructions." ] ; " ";[:flush~];"  01/30/2009 \checkmark"]; 
 
 
     [:para~ "And the stack is generally considered a good idea:"];
@@ -2169,7 +2169,7 @@ r31 xor r31 to r31;
       [])];
 
       ["Load Register with Constant":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Load Constant Instructions." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Load Constant Instructions." ] ; " ";[:flush~];" unmet "]; 
 
 
 
@@ -2225,7 +2225,7 @@ r31 xor r31 to r31;
       [])];
 
       ["Compare Register Values":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Compare Register Values." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Compare Register Values." ] ; " ";[:flush~];" unmet "]; 
 
 
     [:para~ "Routines need to compare things."];
@@ -2248,7 +2248,7 @@ r31 xor r31 to r31;
       [])];
 
       ["Conditional Relative Branch":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Conditional Branch Instructions." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Conditional Branch Instructions." ] ; " ";[:flush~];" unmet "]; 
 
 
    [:para~ "Needed for if-then routines."];
@@ -2273,7 +2273,7 @@ r31 xor r31 to r31;
 
 
   )];["The Application Binary Interface":sect~(
-    [:para~ " ";[:itlc~"Requirement --- Declare a CAP ABI." ] ; " ";[:flush~];" partial "]; 
+    [:para~ " ";[:itlc~"Goal --- Declare a CAP ABI." ] ; " ";[:flush~];" partial "]; 
 
 
 
@@ -2333,7 +2333,7 @@ r31 xor r31 to r31;
     $);[:scpt~ "Sub-projects (sub-sections) for Section 1.5 The Application Binary Interface." ]];
 
       ["Register Assignments":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Declare Register Assignments." ] ; " ";[:flush~];"01/19/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Declare Register Assignments." ] ; " ";[:flush~];"01/19/2009 \checkmark "]; 
 
     [:para~ "Processors differ in how the capacity and number of their registers and in how the registers
              may be used. Some machine language instructions may only work with specific registers. Some registers
@@ -2356,7 +2356,7 @@ r31 xor r31 to r31;
       [])];
 
       ["Calling Convention":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Describe Calling Convention." ] ; " ";[:flush~];"01/19/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Describe Calling Convention." ] ; " ";[:flush~];"01/19/2009 \checkmark "]; 
 
     [:para~ "Two conventions required for subroutines are the calling convention and the stack layout. The calling convention
              includes which registers are saved by the caller and which are saved (or left unmodified) by the callee.  A stack (or 
@@ -2389,7 +2389,7 @@ r31 xor r31 to r31;
       [])];
 
       ["Construction Stack Frame":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define the Construction Stack Frame." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal --- Define the Construction Stack Frame." ] ; " ";[:flush~];" unmet "]; 
 
 
     [:para~ "The current stack frame contains local variables need by construction routines:"]; 
@@ -2421,7 +2421,7 @@ r31 xor r31 to r31;
       [])];
 
       ["Construction Routines":sbsc~(
-    [:para~ " ";[:itlc~"Requirement --- Define Construction Routines." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal --- Define Construction Routines." ] ; " ";[:flush~];" unmet "]; 
 
 
 
@@ -2534,7 +2534,7 @@ r31 xor r31 to r31;
 
 
   )];["Functions":sect~(
-    [:para~ " ";[:itlc~"Requirement --- Implement Functions." ] ; " ";[:flush~];" partial "]; 
+    [:para~ " ";[:itlc~"Goal --- Implement Functions." ] ; " ";[:flush~];" partial "]; 
 
 
     [:mnot~ "abstraction, functions" ] ;
@@ -2560,7 +2560,7 @@ r31 xor r31 to r31;
       [:para~ "--- not yet demonstrated"]; 
       [:skip~];
 
-    $);[:scpt~ "Requirements, continued." ]];
+    $);[:scpt~ "Goals, continued." ]];
 
     [:code~
 
@@ -2750,7 +2750,7 @@ r31 xor r31 to r31;
 
 
   )];["Objects":sect~(
-    [:para~ " ";[:itlc~"Requirement --- Implement Objects." ] ; " ";[:flush~];" unmet "]; 
+    [:para~ " ";[:itlc~"Goal --- Implement Objects." ] ; " ";[:flush~];" unmet "]; 
 
 
     [:mnot~ "objects" ] ;
@@ -2786,15 +2786,51 @@ r31 xor r31 to r31;
   )]);@[ "The Syntax of Syntax" :chap~(
      [:prel~(
 
-    [:para~ "Syntax gives meaning to the sequence of characters in a program text and each programming 
-             language has its own syntax. The code in the previous chapter conforms to the
-             syntax conventions of the ";[:mono~"i" ] ; " programming language. In order to turn that program text into 
-             something that a processor can execute the system needs a definition for and a parser of that syntax."];
+    [:mnot~ "Machine Code" ] ;
+    [:para~ "Once upon a time programmers crafted their programs by wiring circuits to perform logic operations. This was laborious. The stored
+             program computer";[:ftnt~"Williams, Kilburn (1948). Electronic Digital Computers. Nature, Vol 162, p. 487 " ] ; " made it easier to 
+             reconfigure a machine for a new computation--and introduced a machine code. Thus was introduced the new tedium of machine code programming wherein 
+             the binary numbers corresponding to machine operations are calculated by hand."];
 
 
-    [:para~ "The rules for any syntax can be written out using a language specifically designed for explaining syntax rules. 
-             ibnf is one such language. ibnf also has a syntax. This chapter starts with ibnf and then uses it and the i language to define
-             themselves as well as to define other languages. The sections are as follows:"];
+
+    [:mnot~ "Assembly Language" ] ;
+    [:para~ "A mere year later";[:ftnt~"Campbell-Kelly (1998). Programming the EDSAC. Annals of the History of Computing, IEEE, Vol. 20 Issue 4 p. 46-67 " ] ; " an
+             enterprising chap got a computer to assemble machine code for him. The simple assembly language he created mapped letters of the alphabet to machine operations. Subsequent assemblers allow a bit more flexibility but maintain the direct correspondence of assembly statements to machine instructions. "];
+
+    [:mnot~ "Low Level Language" ] ;
+    [:para~ "The programmer attempting to express formulas, procedures and algorithms directly in assembly language soon found him or her self saddled with
+             unweildy programs that were difficult to 
+             debug, integrate, and reason about due to the low conceptual and semantic level of the assembly languages. To make matters worse, the programs
+             were seldom portable from one machine architecture to another.   "];
+
+
+
+    [:mnot~ "High Level Language" ] ;
+    [:para~ "To compensate, software engineers built compilers";[:ftnt~"J.W. Backus, H. Herrick and I. Ziller. (1954) Preliminary Report : Specifications for the IBM Mathematical FORmula TRANSlating System, FORTRAN. Programming Research Group, Applied Science Division, International Business Machines Corporation " ] ; " and
+             interpreters";[:ftnt~"J. McCarthy. (1959) Recursive Functions of Symbolic Expressions and Their Computation by Machine. Memo 8, Artificial Intelligence Project, RLE and MIT Computation Center " ] ; " to further abstract away from the machine and to allow for portable programs that would enable
+             the programmer to move beyond simple instructions to higher level concepts such as procedures, functions, objects, modules, first-class and higher-order 'things' of every kind.";[:ftnt~"Many of which we introduced in the previous chapter. " ] ; "   "];
+
+    [:mnot~ "Domain Specific Language" ] ;
+    [:para~ "Not only did the variety of general purpose languages multiply as new machines and new techniques of program organization arrived,
+             many programmers found that designing a specific language";[:ftnt~"J. Bentley. (1986) Programming Pearls: Little Languages. Communications of the ACM, Vol. 29, No. 8, pp. 711-721 " ] ; "  for a problem or domain made their task easier.  "];
+
+
+    [:para~ "Computer scientists learned (and are still learning) quite a bit from all those languages about how to design, specify, and implement a computer language. 
+             This chapter will use just a tiny fraction of the accumulated knowledge in order to bootstrap a general computer language implementation system.   "];
+
+    [:stxt~`cap,doc,req ~ ( 
+
+      [" ":ssct~(
+
+      [:para~ "2.1 Automatically generate language compilers from BNF-style syntax + semantics. ";[:flush~];" 1/20/2013 \checkmark "];
+
+      [:skip~];
+
+    $);[:scpt~ "Goals, continued." ]];
+
+
+    [:para~ "In order to accomplish the goal, this chapter is organized as follows:  "];
 
 
     [:stxt~`cap,doc,req ~ ( 
@@ -2808,26 +2844,45 @@ r31 xor r31 to r31;
       [:skip~];
 
     [:para~ "2    ";[:flush~];" (Introduction)
-             ";[:flush~];" 61 --- 0/1
+             ";[:flush~];" 59 --- 1/1
              "]; 
 
       [:skip~];
-    [:para~ "2.1 * ";[:flush~];" Common ibnf Rules.
-             ";[:flush~];" 63 --- 1/1
+    [:para~ "2.1 * ";[:flush~];" Syntax and the Backus-Naur Form.
+             ";[:flush~];" 61 --- 0/0
              "]; 
 
       [:skip~];
-    [:para~ "2.2 * ";[:flush~];" The ibnf for ibnf.
-             ";[:flush~];" 68 --- 0/1
+    [:para~ "2.2 * ";[:flush~];" Common ibnf Rules.
+             ";[:flush~];" 62 --- 1/1
              "]; 
 
       [:skip~];
-    [:para~ "2.3 * ";[:flush~];" The i Language in ibnf syntax.
+    [:para~ "2.3 * ";[:flush~];" A Calculator Example.
+             ";[:flush~];" 65 --- 1/1
+             "]; 
+
+      [:skip~];
+    [:para~ "2.4 * ";[:flush~];" Declaring ibnf in ibnf/six.
+             ";[:flush~];" 69 --- 1/1
+             "]; 
+
+      [:skip~];
+    [:para~ "2.5 * ";[:flush~];" Implementing six in ibnf/six.
+             ";[:flush~];" 75 --- 1/1
+             "]; 
+
+      [:skip~];
+    [:para~ "2.6 * ";[:flush~];" A toy compiler in ibnf/six
+             ";[:flush~];" 81 --- 1/1
+             "]; 
+
+    [:para~ "2.6 * ";[:flush~];" The i Language in ibnf/six.
              ";[:flush~];" 72 --- 0/1
              "]; 
 
       [:skip~];
-    [:para~ "2.4 * ";[:flush~];" Other Programming Languages.
+    [:para~ "2.6 * ";[:flush~];" Other Programming Languages.
              ";[:flush~];" 80 --- 0/9
              "]; 
 
@@ -2836,46 +2891,62 @@ r31 xor r31 to r31;
     $);[:scpt~ "Sub-projects (sections) for Chapter 2: The Syntax of Syntax." ]];
 
 
+    [:para~ "Just as with the previous chapter, this is a 
+             literate program";[:ftnt~"Donald E. Knuth, Literate Programming, Stanford, California: Center for the Study of Language and Information, 1992, CSLI Lecture Notes, no. 27" ] ; "
+             wherein regular descriptive text (such as this
+             paragraph) is mixed with computer evaluated program text in a ";[:mono~"monospace font" ] ; "."]; 
 
-    [:para~ "In the ";[:mono~"cap" ] ; "
-             system ";[:mono~"ibnf" ] ; " is defined in terms of itself, and a goal of the system is
-             that parsers be automatically generated from their syntax definitions:"];
 
-    [:stxt~`cap,doc,req ~ ( 
 
-      [" ":ssct~(
 
-      [:para~ "2.1 Automatically generate language parsers from BNF-style syntax descriptions."]; 
+  )];["Syntax and the Backus-Naur Form":sect~(
 
-      [:para~ "--- not yet demonstrated"]; 
-      [:skip~];
 
-    $);[:scpt~ "Requirements, continued." ]];
 
-    [:para~ "A place for syntax definitions, including those of ";[:mono~"ibnf" ] ; " and 
-     of ";[:mono~"i" ] ; ", is needed in the system. 
-     Since syntax is an architecture independent concept, a syntax definition module";[:ftnt~"D.L. Parnas, (1972). On the Criteria To Be Used in Decomposing Systems into Modules. Communications of the ACM  Vol. 15, No. 12 pp.1053 - 1058 " ] ; " will be placed in the ";[:mono~"indp" ] ; " branch of the tree."];
+    [:para~ "Early on language designers realized they needed a formal way of describing what was a 
+             validly declared (as opposed to correct or bug";[:ftnt~"Hopper, (1947) U.S. Naval Historical Center Online Library Photograph NH 96566-KN " ] ; "-free)
+             program in a particular language and what was not. "];
+
+    [:mnot~ "BNF," ] ;
+    [:mnot~ "Syntax" ] ;
+    [:para~ "John Backus (and Peter Naur) gave us that formal method of describing";[:ftnt~"J. W. Backus, (1959) The syntax and semantics of the proposed international algebraic language of the Zuerich ACM-GRAMM conference, ICIP Paris" ] ; " computer language syntax. The following 
+             example shows how Backus-Naur Form describes a syntax with simple textual grammar made of lowercase letters, 
+             numbers and keyboard-accessible symbols:"];
+
+    [:xtne~ `cap,env,lang,indp,sntx,example ~  ( "
+
+     <us phone number> ::= ( <three digits> ) <three digits> - <four digits>
+     <three digits>    ::=  <digit> <digit> <digit> 
+     <four digits>     ::=  <digit> <digit> <digit> <digit> 
+     <digit>           ::==  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9  
+
+  "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,example" ]];
+
+    [:para~ " ";[:mono~"(111)222-3333" ] ; " satisfies the above grammer, 
+             while ";[:mono~"(44)5555-666" ] ; " 
+             and ";[:mono~"(777) 888 - 9999" ] ; " (note the spaces) do not."]; 
+
+    [:para~ "This chapter will use a variant of BNF called  ";[:mono~"ibnf" ] ; ", formally defined in section 2.4. "];
+
+    [:para~ "In the over-arching project of which this chapter is a part, syntax definitions (starting with an ibnf description of commonly-used
+             character sequences) will be placed in the ";[:mono~"indp" ] ; " branch of the 
+             tree:";[:ftnt~"This line of i code declares a location where our syntax definitions may reside. See chapter 1 for an introduction to i code." ] ; " "];
 
     [:code~
 
-`cap,env,lang,indp ~ ( [ sntx :~  $ ]; $);
+`cap,env,lang,indp ~ ( [ sntx :~  ( [ common-chr :~( [ ibnf :~ $ ]; $ )]; $ )]; $);
 
     [:capt~ "Just two syntaxes to start with." ]];
 
-    [:mnot~ "BNF" ] ;
-    [:para~ "Backus-Naur Form";[:ftnt~"Knuth, Donald E. (1964). Backus Normal Form vs. Backus Naur Form. Communications of the ACM 7 (12): pp. 735–736" ] ; " is
-             a language and convention for describing syntax. ";[:mono~"ibnf" ] ; " is derived from BNF. 
-             Every complete syntax definition in ";[:mono~"cap" ] ; " 
-             (including ";[:mono~"ibnf" ] ; ") contains 
-             an ";[:mono~"ibnf" ] ; " text describing the syntax and a 
-             parsing function automatically generated from that ";[:mono~"ibnf" ] ; " text by the system."];
 
 
   )];["Common ibnf Rules":sect~(
 
     [:mnot~ "rules" ] ;
-    [:para~ " ";[:mono~"ibnf" ] ; " consists of a sequence of rules. 
-             Many syntax definitions will share a common set of rules. These rules can be collected and defined just once."];
+    [:para~ "An ";[:mono~"ibnf" ] ; " syntax consists of a sequence of rules. 
+             Many complete syntax definitions (often for different languages) may share 
+             a common set of rules. These rules can be collected and defined just once, then composed in a modular";[:ftnt~"D.L. Parnas, (1972). On the Criteria To Be Used in Decomposing Systems into Modules. Communications of the ACM  Vol. 15, No. 12 pp.1053 - 1058 " ] ; " manner. This section will define some commonly-used
+             character sequences applicable to many grammars.  "];
 
     [:stxt~`cap,doc,req ~ ( 
 
@@ -2885,42 +2956,13 @@ r31 xor r31 to r31;
 
       [:skip~];
 
-    $);[:scpt~ "Requirements, continued." ]];
+    $);[:scpt~ "Goals, continued." ]];
 
-    [:para~ "A syntax needs a place to reside."]; 
 
-    [:code~
 
-`cap,env,lang,indp,sntx ~ ( [ common-chr :~( [ ibnf :~ $ ]; $ )]; $ );
-
-    [:capt~ "Just two syntaxes to start with." ]];
-
-    [:mnot~ "rule name," ] ;
-    [:mnot~ "rule type," ] ;
-    [:mnot~ "rule body," ] ;
-    [:mnot~ "sub rule," ] ;
-    [:mnot~ "semantic result," ] ;
-    [:mnot~ "composition rule" ] ;
-    [:para~ "A syntax needs a place to  ";[:mono~"start" ] ; ". Syntax 
-             rules have four parts, as shown below: a rule name (";[:mono~"'start'" ] ; ") a 
-             rule type (";[:mono~"'='" ] ; ") 
-             a rule body (";[:mono~"'syntax:'" ] ; ") and 
-             semicolon (";[:mono~"';'" ] ; ") to end the rule. 
-             The ";[:mono~"'='" ] ; " for this rule means this is a composition rule, in which
-             the semantic result for it is composed of the semantic results obtained from parsing its rule body.
-             The colon in the rule body indicates that the semantic result is simply the 
-             result returned from parsing the sub-rule named ";[:mono~"'syntax'" ] ; "."];
-
-    [:mnot~ "start" ] ;
-    [:para~ "The following ibnf definitions 
-             are all collected in ";[:mono~"sntx,common-chr,ibnf" ] ; "."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-chr,ibnf ~  ( "
-
-     start = syntax: ; 
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-chr,ibnf" ]];
-
+    [:para~ "The program text in this section, highligted in blue, is declared to be stored 
+             contiguously as  ";[:mono~"sntx,common-chr,ibnf" ] ; " but when extracted from this document may
+             named  ";[:mono~"common-chr.ibnf" ] ; "."];
 
     [:mnot~ "digits," ] ;
     [:mnot~ "alternatives rule" ] ;
@@ -2992,13 +3034,16 @@ r31 xor r31 to r31;
     [:xtnt~ `cap,env,lang,indp,sntx,common-chr,ibnf ~  ( "
 
      smb ? '-'|'_'|'+'|'='|'`'|'~'|'!'|'@'|'#'|'$'|'%'|'^'|'&'|
-            '*'|'('|')'|','|'.'|'<'|'>'|'?' ; 
+            '|'|'/'|':'|';'|'*'|'('|')'|'['|']'|'{'|'}'|','|'.'|'<'|'>'|'?' ; 
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-chr,ibnf" ]];
 
-    [:mnot~ "escaped symbols" ] ;
+    [:mnot~ "escaped symbols," ] ;
+    [:mnot~ "accumulation rule" ] ;
     [:para~ "Three specific symbols are always preceded by a backslash when included in 
-             strings in ";[:mono~"ibnf" ] ; ". Two more may be."];
+             typical strings. Two more may be. Each specific symbol is
+             described as the accumulation of the rule for matching a 
+             backslash and for matching that symbol. Accumulation rules are identified by a forward slash."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,common-chr,ibnf ~  ( "
 
@@ -3014,8 +3059,8 @@ r31 xor r31 to r31;
     [:mnot~ "whitespace," ] ;
     [:mnot~ "scannerless" ] ;
     [:mnot~ "parser" ] ;
-    [:para~ "Whitespace characters need definition too. The ";[:mono~"cap" ] ; " system uses 
-             a scannerless parser";[:ftnt~"Daniel J. Salomon and Gordon V. Cormack. Scannerless NSLR(1) parsing of programming languages. SIGPLAN ’89, pp 170-178. ACM Press, 1989." ] ; " and whitespace is explicitly coded in the grammar."];
+    [:para~ "Whitespace characters need definition too. The code in this chapter implements 
+             a scannerless parser";[:ftnt~"Daniel J. Salomon and Gordon V. Cormack. Scannerless NSLR(1) parsing of programming languages. SIGPLAN ’89, pp 170-178. ACM Press, 1989." ] ; " and whitespace is explicitly coded in ibnf grammars."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,common-chr,ibnf ~  ( "
 
@@ -3023,14 +3068,13 @@ r31 xor r31 to r31;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-chr,ibnf" ]];
 
-    [:mnot~ "text collection rule," ] ;
     [:mnot~ "optional rule," ] ;
     [:mnot~ "recursive rule," ] ;
     [:mnot~ "sequences" ] ;
-    [:para~ "Whitespace is often made of spaces in sequence. The slash 
-             indicates that this is a text collection rule, in which the semantic result of the rule is the 
-             source text over which the rule is matched. The period 
-             indicates an optional rule, and in this case the rule is recursive,
+    [:para~ "Whitespace is often made of spaces in sequence. The period in this next rule
+             indicates an optional item in the sequence, and in this case the item refered
+             to is the rule itself and so the rule is 
+             recursive";[:ftnt~"Wirth, Niklaus (1976). Algorithms + Data Structures = Programs. Prentice-Hall p. 126." ] ; ",
              allowing a sequence of one or more spaces to be met by the rule."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,common-chr,ibnf ~  ( "
@@ -3044,7 +3088,7 @@ r31 xor r31 to r31;
 
     [:xtnt~ `cap,env,lang,indp,sntx,common-chr,ibnf ~  ( "
 
-     sp   ? ' '|'\t' ;
+     sp   ? ' ' | '\t' ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-chr,ibnf" ]];
 
@@ -3087,325 +3131,486 @@ r31 xor r31 to r31;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-chr,ibnf" ]];
 
-    [:para~ "Note that in all the above common ibnf definitions the only rule that is referred to but not yet defined is the ";[:mono~"syntax" ] ; " 
-             rule at ";[:mono~"start" ] ; ". A complete syntax will have no undefined rules."];
-
-    [:para~ "Another common set of definitions can be made for arithmentic expressions 
-             (defined in ";[:mono~"sntx,common-ari,ibnf" ] ; ") as follows:"];
-
-    [:para~ "common-ari needs a place to reside."]; 
-
-    [:code~
-
-`cap,env,lang,indp,sntx ~ ( [ common-ari :~( [ ibnf :~ $ ]; $ )]; $ );
-
-    [:capt~ "Just two syntaxes to start with." ]];
-
-    [:mnot~ "negatable" ] ;
-    [:para~ "A negatable expression is one which may be negated, 
-             and the (optional) negation is identified with a '-' sign."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     nexpr   = .s .neg expr ;
-     neg     ? '-' ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "expression" ] ;
-    [:para~ "An expression may be an addition, a subtraction, an multiplication, a division, or an item all by itself."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     expr    ? addexpr | subexpr | mulexpr | divexpr | itmexpr ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "addition" ] ;
-    [:para~ "The addition expression (with optional white space) is two items joined by a '+' sign."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     addexpr = .s itm .s '+' .s itm ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "subtraction" ] ;
-    [:para~ "Likewise the subtraction."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     subexpr = .s itm .s '-' .s itm ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "multiplication" ] ;
-    [:para~ "Likewise the multiplication."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     mulexpr = .s itm .s '*' .s itm ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "division" ] ;
-    [:para~ "Likewise the division."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     divexpr = .s itm .s '/' .s itm ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "item expression" ] ;
-    [:para~ "The item expression is just an item."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     itmexpr = .s itm  ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "item" ] ;
-    [:para~ "An item may be a variable identifier, a positive integer or a parenthetical negatable expression."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     itm     ? vbl | pnt | parens ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "variable" ] ;
-    [:para~ "A variable is just a lowercase letter."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     vbl     = lwr ; 
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:mnot~ "parentheses" ] ;
-    [:para~ "Parentheses surround a negatable expression. Nesting is thus allowed."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,common-ari,ibnf ~  ( "
-
-     parens  = .s '(' nexpr .s ')' ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-ari,ibnf" ]];
-
-    [:para~ "The common-ari ibnf syntax also is not a complete syntax and is designed for inclusion in some other 
-              syntax. A calculator syntax provides a good example of a complete syntax with 
-              semantics performing a useful function."];
 
   )];["A Calculator Example":sect~(
 
-    [:para~ "A calculator is a tool which needs a place to live:"];
 
-    [:code~
+    [:para~ "A calculator that can compute simple math expressions will have a syntax for those
+             expressions. This calculator example therefore contains additional syntax definitions."];
 
-`cap,env ~  (
-   [ tool :~ (
-     [ calc :~ (
-       [ syntax :~ $ ];
-       [ intrpsmntx :~ $ ];
-       [ cmplsmntx :~ $ ];
-       [ test.calc :~ $ ];
-   $ ) ]; $ ) ];  $ );
-    [:capt~ "Calculator Example" ]];
-
-    [:para~ "And the syntax is a sequence of newline-terminated lines:"];
-
-    [:xtnt~ `cap,env,tool,calc,syntax ~  ( "
-
-     syntax  = line .s '\n' .syntax ;
-
-  "; $ ); [:xcpt~ "cap,env,tool,calc,syntax" ]];
-    [:xtns~ `cap,env,bootstrap,smtx.py ~  ( "
-
-def syntax_s( a, m, s, e, c, n ):  return ( True, True, s, e-s, c, ( n, a[1]))
-
-  "; $ ); [:xcps~ "cap,env,bootstrap,smtx.py" ]];
-
-
-    [:para~ "A line may include a variable assignment but will include a negatable expression:"];
-
-    [:xtnt~ `cap,env,tool,calc,syntax ~  ( "
-     line    = .var nexpr ;
-  "; $ ); [:xcpt~ "cap,env,tool,calc,syntax" ]];
-    [:xtns~ `cap,env,bootstrap,smtx.py ~  ( "
-
-def line_s( a, m, s, e, c, n ):
-  print fi[s:e] + " --> " + a[2][1]
-  if len(a[1])>0:  registers[a[1][1][1]] = int(a[2][1])
-  return ( True, True, s, e-s, c, (n, a[2][1]))
-  "; $ ); [:xcps~ "cap,env,bootstrap,smtx.py" ]];
-
-
-    [:para~ "A variable assignment is just a lowercase letter followed by the equals sign:"];
-
-    [:xtnt~ `cap,env,tool,calc,syntax ~  ( "
-     var     = .s lwr: .s '=' ; 
-  "; $ ); [:xcpt~ "cap,env,tool,calc,syntax" ]];
-
-    [:para~ "The parser needs semantics. For bootstrappig we will use python:"];
-
-    [:xtnt~ `cap,env,bootstrap,smtx.py ~  ( "
-def nexpr_s( a, m, s, e, c, n ):
-  if len(a[2]) > 1:
-    if a[2][1]=='-':  return ( True, True, s, e-s, c, (n, str(0 - int(a[3][1])) ))
-    else:   return ( True, True, s, e-s, c,(n,  a[3][1] ))
-  else:  return ( True, True, s, e-s, c, (n, a[3][1] ))
-
-def plu_s( a, m, s, e, c, n ):  return ( True, s, e-s, c, (n, a[1] ))
-
-def itmexpr_s( a, m, s, e, c, n ):  return ( True, True, s, e-s, c, (n, a[2][1] ))
-
-def addexpr_s( a, m, s, e, c, n ):  return ( True, True, s, e-s, c, (n, str(int(a[2][1]) + int(a[6][1])) ))
-
-def subexpr_s( a, m, s, e, c, n ):  return ( True, True, s, e-s, c, (n, str(int(a[2][1]) - int(a[6][1])) ))
-
-def mulexpr_s( a, m, s, e, c, n ):  return ( True, True, s, e-s, c, (n, str(int(a[2][1]) * int(a[6][1])) ))
-
-def divexpr_s( a, m, s, e, c, n ):  return ( True, True, s, e-s, c, (n, str(int(a[2][1]) / int(a[6][1])) ))
-
-def vbl_s( a, m, s, e, c, n ):  return ( True, True, s, e-s, c, (n, str( registers[a[1][1]] ) ))
-
-def parens_s( a, m, s, e, c, n ): return ( True, True, s, e-s, c, (n, a[3][1] ))
-
-def build (v,m,s,l,c,a): return 'success'
-  "; $ ); [:xcpt~ "cap,env,bootstrap,smtx.py" ]];
-
-
-
-    [:para~ "But a less complex syntax defines a simple calculator:"];
-
-    [:para~ "The semantic actions for a calculator interpreter are as follows:"];
-
-    [:xtnt~ `cap,env,tool,calc,intrpsmntx ~  ( "
-   ibnf semantics (
-   syntax  ( makenodes for arguments              ) ;
-   vexpr   ( setnodeval (bnft var) to (bnfv expr) ) ;
-   addexpr ( (bnfv opexpr) + (bnfv mdexpr)        ) ;
-   subexpr ( (bnfv opexpr) - (bnfv mdexpr)        ) ;
-   mulexpr ( (bnfv opexpr) * (bnfv mdexpr)        ) ;
-   divexpr ( (bnfv opexpr) / (bnfv mdexpr)        ) ;
-   varset  ( getnodeval (bnft var)                ) ;
-   numset  ( bnfv num                             ));
-  "; $ ); [:xcpt~ "cap,env,tool,calc,intrpsmntx" ]];
-
-    [:para~ "A calculator needs input:"];
-
-    [:xtnt~ `cap,env,tool,calc,test.calc ~  ( "
-a=1
-b=2
-c=a+b
-d=(a*3)/2
-d
-  "; $ ); [:xcpt~ "cap,env,tool,calc,test.calc" ]];
-
-    [:para~ "The semantic actions for a calculator compiler are as follows:"];
-
-    [:xtnt~ `cap,env,tool,calc,cmplsmntx ~  ( "
-   ibnf semantics (
-   syntax  ( makenodes for arguments              ) ;
-   vexpr   ( setnodeval (bnft var) to (bnfv expr) ) ;
-   addexpr ( (bnfv opexpr) + (bnfv mdexpr)        ) ;
-   subexpr ( (bnfv opexpr) - (bnfv mdexpr)        ) ;
-   mulexpr ( (bnfv opexpr) * (bnfv mdexpr)        ) ;
-   divexpr ( (bnfv opexpr) / (bnfv mdexpr)        ) ;
-   varset  ( getnodeval (bnft var)                ) ;
-   numset  ( bnfv num                             ));
-  "; $ ); [:xcpt~ "cap,env,tool,calc,cmplsmntx" ]];
-
-
-
-  )];["The ibnf for ibnf":sect~(
-
-    [:mnot~ "compiler-compiler" ] ;
-    [:para~ "Annotating rules with productions enables the system to automatically
-             construct a parser/compiler for program texts written in that syntax.  
-             When ";[:mono~"ibnf" ] ; " itself is the syntax being described
-             in ";[:mono~"ibnf" ] ; " the output of the parser/compiler
-             is a parser-generator or a compiler-compiler";[:ftnt~"Stephen C. Johnson. YACC: Yet Another Compiler-Compiler. Unix Programmer's Manual Vol 2b, 1979." ] ; ". "];
 
     [:stxt~`cap,doc,req ~ ( 
 
       [" ":ssct~(
 
-      [:para~ "2.3 Declare ibnf in ibnf."]; 
+      [:para~ "2.2 Implement a Calculator Example.  ";[:flush~];" 1/28/2013 \checkmark "]; 
 
-      [:para~ "--- not yet demonstrated"]; 
       [:skip~];
 
-    $);[:scpt~ "Requirements, continued." ]];
+    $);[:scpt~ "Goals, continued." ]];
 
-    [:para~ " ";[:mono~"ibnf" ] ; " includes the common definitions introduced in the previous section and introduces more."];
+    [:para~ "The calculator example syntax is defined in ";[:mono~"sntx,calc-example,ibnf" ] ; " and is
+             exported as  ";[:mono~"calc-example.ibnf" ] ; "):. "];
 
     [:code~
 
-`cap,env,lang,indp,sntx,ibnf,ibnf, ~ (
-      cap,lang,indp,sntx,common-chr,ibnf ;
-  $ );
+`cap,env,lang,indp,sntx ~ ( [ calc-example :~( [ ibnf :~ $ ];
+                                               [ six-py  :~ $ ];
+                                               [ input  :~ $ ]; $ )]; $ );
+    [:capt~ "A place for a calculator example." ]];
+
+    [:para~ "In this calculator example the syntax is a sequence of newline-terminated lines:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+     syntax  = line .s '\n' .syntax ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+
+    [:mnot~ "Semantic actions" ] ;
+    [:para~ "But calculator does not just parse expressions... It must also return results. Returning the results of what was
+             expressed in the parsed syntax make up the semantic actions";[:ftnt~"Dijkstra, Edsger W. (1976.) The characterization of semantics (A Discipline of Programming, Chapter 3) Prentice-Hall." ] ; ", of the calculator. "];
+
+    [:para~ "In this chapter another set of definitions declare what
+             semantic action is associated with the succesful parsing of a syntax item. In this calculator example the 
+             semantics are defined in ";[:mono~"sntx,calc-example,six-py" ] ; " and are
+             exported as  ";[:mono~"calc-example.six-py" ] ; "). For convenience the semantic actions are shown in
+             a different color. Here is the semantic declaration for the above syntax rule: "];
+
+
+    [:xtns~ `cap,env,lang,indp,sntx,calc-example,six-py ~  ( "
+
+     syntax  ^ .1.1 + .4.1
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,calc-example,six-py" ]];
+
+    [:para~ "The above semantic action for the syntax rule merely says that the semantic results of the 
+             first component of the syntax rule (e.g. the result of the line rule) is concatenated with the fourth
+             component of the syntax rule (e.g. the result of recursively applying the syntax rule.)"];
+
+
+    [:para~ "For the syntax of a line, one may include a variable assignment but will include a negatable expression:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+     line  = .var nexpr ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,calc-example,six-py ~  ( "
+
+     line  : registers[ .1.1.1 ] = int( .2.1 ) 
+           |  --> ` .2.1 `
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,calc-example,six-py" ]];
+
+    [:para~ "For the semantics of a line, a register will be assigned the value of the negatable expression and then a 
+             textual string containing the value of the negatable expression will be returned to be accumulated
+             by the syntax rule."];
+
+    [:mnot~ "Implementation Language" ] ;
+    [:para~ "The semantic expressions for these syntax rules are a pidgin";[:ftnt~"Holm, John (2000),  An Introduction to Pidgins and Creoles, Cambridge Univ. Press." ] ; " of
+             'semantics for ibnf expressions' mixed with the native syntax of another programming language used for implementation such 
+              as (in this case) python. In the above examples the references (e.g. .1.1 or .4.1) are references to 
+              sematic products of the 'six' parsing engine, while the funcitons, assignments, and operations (e.g. int(), =, + )
+              are borrowed from the implementation language. "];
+
+    [:mnot~ "Parsing Engine," ] ;
+    [:mnot~ "Syntax Tree" ] ;
+    [:para~ "The ibnf/six system is a regularly constructed parsing engine that consumes a source text 
+             under the direction of an ibnf grammer text and produces a result. 
+             Each time a syntax rule successfully parses all of its sub rules, the collection
+             of the sub rule results is passed as a tuple to the semantic action of the rule. The result of the 
+             semantic action is returned from the rule to be accumulated in a tuple at the next level up. The natural
+             intermediate representation of this behaivor is a syntax tree."];
+
+    [:para~ "For convenience there are three modes of semantic production, each seen once above. The caret indicates
+             that a referenced item or the result of an operation (which may be on referenced items) should be returned. The colon
+             indicates that a computation will occur before a result is returned. A sequence of lines with vertical bars declare
+             quoted text to be returned, with back-ticks unescaping expressions embedded in the quoted text."];
+
+    [:para~ "Continuing the example:"];
+
+    [:mnot~ "negatable" ] ;
+    [:para~ "A negatable expression is one which may be negated, 
+             and the (optional) negation is identified with a '-' sign."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+     nexpr   = .s .neg expr ;
+     neg     ? '-' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,calc-example,six-py ~  ( "
+
+     nexpr   ^ (str(0 - int(.3.1)) if(len(.2) > 1 and .2.1 == "-") else .3.1 )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,calc-example,six-py" ]];
+
+
+    [:para~ "A variable assignment is just a lowercase letter followed by the equals sign:"];
+
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+     var     = .s lwr .s '=' ; 
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,calc-example,six-py ~  ( "
+
+     var     ^ .2  
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,calc-example,six-py" ]];
+
+    [:mnot~ "expression" ] ;
+    [:para~ "An expression may be an addition, a subtraction, an multiplication, a division, or an 
+             item all by itself."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+     expr    ? addexpr | subexpr | mulexpr | divexpr | itmexpr ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+
+    [:mnot~ "addition" ] ;
+    [:mnot~ "subtraction" ] ;
+    [:mnot~ "multiplication" ] ;
+    [:mnot~ "division" ] ;
+    [:para~ "The addition expression (with optional white space) is two items joined by a '+' 
+             sign.  Likewise the subtraction, multiplication, and division."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+     addexpr = .s itm .s '+' .s itm ;
+     subexpr = .s itm .s '-' .s itm ;
+     mulexpr = .s itm .s '*' .s itm ;
+     divexpr = .s itm .s '/' .s itm ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,calc-example,six-py ~  ( "
+
+     addexpr ^ str(int(.2.1) + int(.6.1)) 
+     subexpr ^ str(int(.2.1) - int(.6.1)) 
+     mulexpr ^ str(int(.2.1) * int(.6.1)) 
+     divexpr ^ str(int(.2.1) / int(.6.1)) 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,calc-example,six-py" ]];
+
+    [:mnot~ "item expression," ] ;
+    [:mnot~ "item," ] ;
+    [:mnot~ "variable" ] ;
+    [:para~ "The item expression is just an item. An item may be a 
+             variable identifier, a positive integer or a parenthetical negatable expression. "];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+     itmexpr = .s itm  ;
+     itm     ? vbl | pnt | parens ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,calc-example,six-py ~  ( "
+
+     itmexpr ^ .2.1  
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,calc-example,six-py" ]];
+
+    [:mnot~ "variable" ] ;
+    [:para~ "A variable is just a lowercase letter, but when the sytnax is matched in an expression the semantic action is to
+             retrieve the previous value recorded for that variable."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+      vbl     = lwr ; 
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,calc-example,six-py ~  ( "
+
+      vbl     ^ str( registers[ .1.1 ] )  
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,calc-example,six-py" ]];
+
+    [:mnot~ "parentheses" ] ;
+    [:para~ "Parentheses surround a negatable expression. Nesting is thus allowed."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,calc-example,ibnf ~  ( "
+
+     parens  = .s '(' nexpr .s ')' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,calc-example,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,calc-example,six-py ~  ( "
+
+     parens ^ .3.1  
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,calc-example,six-py" ]];
+
+    [:para~ "A calculator needs input:"];
+
+
+    [:xtne~ `cap,env,lang,indp,sntx,calc-example,input ~  ( "
+a=1+34
+b=a + 40
+c = 56-6
+ d = b - c
+x = 10 / 2
+v = x - 12
+y = - ( 5 - 3 )
+z = -80
+e = (3 + 5 ) / ( 2 + 2 )
+f = - 1
+  "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,calc-example,input" ]];
+
+    [:para~ "To build the example, first run the semantic rule parser on the calculator example semantic rules:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+python sixparser.py calc-example.six-py blank.txt calc-example.smtx
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+    [:para~ "Combine the grammars and then run the syntax rule parser on the calculator example syntax rules and include the generated semantics as a parameter:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+cat ./common-chr.ibnf ./calc-example.ibnf > ./calc-example-full.ibnf
+python ibnfmeta.py calc-example-full.ibnf calc-example.smtx calc-example.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+    [:para~ "Run the calculator on the input and view the output:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+python calc-example.py calc-example.input blank.txt calc.out
+cat calc.out
+
+ --> 35
+ --> 75
+ --> 50
+ --> 25
+ --> 5
+ --> -7
+ --> -2
+ --> -80
+ --> 2
+ --> -1
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+
+
+  )];["Declaring ibnf in ibnf/six":sect~(
+
+    [:mnot~ "compiler-compiler" ] ;
+    [:para~ "Annotating rules with productions (as shown in the calculator example) enables the system to automatically
+             construct an interpreter or even a compiler for input texts written in the described syntax.  When the described
+             syntax is a system for describing syntax (e.g. ";[:mono~"ibnf.ibnf" ] ; ") and when the semantics are those of 
+             semantics-generation (as will be seen in ";[:mono~"ibnf.six-py" ] ; ",
+             ";[:mono~"six.ibnf" ] ; "
+             and in ";[:mono~"six.six-py" ] ; ") then the result is a parser-generator or a 
+             compiler-compiler";[:ftnt~"Stephen C. Johnson. YACC: Yet Another Compiler-Compiler. Unix Programmer's Manual Vol 2b, 1979." ] ; ". "];
+
+
+
+    [:mnot~ "meta-compiler" ] ;
+    [:para~ "If the compiler-compiler thus described is sufficiently versatile to reproduce its own 
+             executable when provided with its own syntax and semantics definitions then the 
+             result is a metacompiler";[:ftnt~"Schorre (1964). A Syntax-Oriented Complier Writing Language. Proceedings of the 1964 19th ACM National Conference, ACM Press, New York, NY, 41.301-41.3011" ] ; ".
+             ";[:mono~"ibnf/six" ] ; " is a metacompiler."];
+
+    [:stxt~`cap,doc,req ~ ( 
+
+      [" ":ssct~(
+
+      [:para~ "2.3 Declare ibnf in ibnf/six.  ";[:flush~];" 1/15/2013 \checkmark "]; 
+
+      [:skip~];
+
+    $);[:scpt~ "Goals, continued." ]];
+
+    [:para~ " ";[:mono~"ibnf" ] ; " will use the common definitions introduced in the first section and introduces 
+             more defined in ";[:mono~"sntx,ibnf,ibnf" ] ; " and
+             exported as  ";[:mono~"ibnf.ibnf" ] ; ". The semantic rules for parsing 
+             ibnf are defined in ";[:mono~"sntx,ibnf,six-py" ] ; " and are
+             exported as  ";[:mono~"ibnf.six-py" ] ; ". "];
+
+    [:code~
+
+`cap,env,lang,indp,sntx ~ ( [ ibnf :~( [ ibnf :~ $ ];
+                                       [ six-py  :~ $ ]; $ )]; $ );
     [:capt~ "Start with the basics." ]];
 
-    [:para~ "The result of processing the rules of syntax for ibnf will be an ibnf parser."];
+    [:mnot~ "PEG," ] ;
+    [:mnot~ "packrat" ] ;
+    [:para~ "The ";[:mono~"ibnf/six" ] ; " system implements a parsing expression grammer, or 
+             PEG";[:ftnt~"Ford, Bryan (2004). Parsing Expression Grammars: A Recognition Based Syntactic Foundation. Proceedings of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages." ] ; ". A PEG imposes an order of selection on 
+             what might otherwise be an ambiguous choice in a BNF-style grammer-- in a 
+             PEG the first option is selected when there are two possible matches. In addition the  ";[:mono~"ibnf/six" ] ; " system 
+             implements a packrat";[:ftnt~"Warth, Douglass, Millstein (2008). Packrat Parsers Can Support Left Recursion. ACM SIGPLAN 2008 Workshop on Partial Evaluation and Program Manipulation" ] ; ". parser, using memoization of previously visited states as an optimization for efficiency and for handling recursive rules."];
 
+    [:para~ "The result of processing the syntax and semantics rules in this section will be an ";[:mono~"ibnf" ] ; " syntax parser, which is one
+             half of the  ";[:mono~"ibnf/six" ] ; " system. 
+             Crafting a ";[:mono~"six" ] ; " syntax parser with its own semantic rules will be the subject of the section following this one.  "];
+
+    [:para~ "To begin with, a syntax is made of rules."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- syntax = rules: ;    
+ syntax = rules ;    
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
 
-    [:para~ "The rules rule is defined recursively:"];
+ syntax   ^ prologue + .1.1 + semantics + epilogue 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
+
+    [:para~ "The semantic action of the syntax rule is to produce a program of four parts: a prologue that sets up the parsing engine initial conditions, 
+             a set of function definitions (each corresponding to a defined rule in the syntax being parsed,) the semantic actions for the 
+             syntax being parsed and an epilogue that performs the final actions of the parsing engine before it exits. In this implementation
+             of  ";[:mono~"ibnf/six" ] ; " the result is a python program."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
  rules = rule .rules ;    
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
 
-    [:para~ "A rule is either of a rule type or it is just a blank line."];
+ rules   ^ .1.1 + .2.1 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
+
+    [:para~ "The function definitions that result from successfuly parsed rules are simply concatenated into a sequence of function definitions."];
+
+    [:para~ "A rule may incorporate other rules, may be a choice amongst alternatives or may just be a blank line:"];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- rule ? incorp | accum | altern | blankline ;
+ rule ? incorp | altern | blankline ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
 
-    [:para~ "Blank lines have optional whitespace and end in a newline character."];
+    [:para~ "Blank lines have optional whitespace and end in a newline character. Blank lines provide
+             nothing to the parsing program that is being assembled."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- blankline / w '\n' ;
+ blankline = .s '\n' ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
+
+ blankline  ^ "" 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
 
     [:para~ "Each rule type has a name and a body. The alternating rule is signified by a question mark."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- altern =  w name w '?' albody  w ';' w '\n'  ;
+ altern =  .s name .s '?' albody  .s ';' .s '\n'  ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
 
-    [:para~ "The incorporating rule is signified by a forwards slash."];
+    [:para~ "The semantic action of matching an 'altern' rule is to compose a new function that takes an input 
+             text and indicates a match was found if that input text starts with one of the alternatives listed
+             in the body of the 'altern' rule."];
+
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
+
+ altern  |def `.2.1`_p( s, c):
+         |  if been("`.2.1`",s): return was( c, "`.2.1`",s)
+         |  else:
+         |    mark("`.2.1`",s,(F,T,s,0,c,("","")));met = F 
+         |`#.5#` 
+         |    if not met:
+         |      return mark("`.2.1`",s,(F,T,s,0,c,("","")))
+         |    else:
+         |      return mark("`.2.1`",s,(met,mem,s,tl,tc,ta)) 
+ .albody ^ #.1.2#  + #.1.3.1#
+ .cmatch ^ #.1#
+ .cm     |    if not met: (met,mem,ts,tl,tc,ta)=cm('`.1`',s,c)
+ .btb    |    if not met: (met,mem,ts,tl,tc,ta)=cm('`.1`',s,c)
+ .bnl    |    if not met: (met,mem,ts,tl,tc,ta)=cm('`.1`',s,c)
+ .name   |    if not met: (met,mem,ts,tl,tc,ta)=`.1`_p(s,c)
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
+
+    [:para~ "The first thing the produced function does is check to see if the same 
+             position in the source text has already been evaluated for matching that syntax rule. If so the function
+             returns the success or failure previously determined."];
+
+    [:para~ "If that location in the source text has not been evaluated for matching the syntax rule before, the generated
+             function marks the location as failing the match and sets a flag (for having met at least one rule) to False."];
+
+    [:para~ "In the process of creating the generated function, the 'altern' rule next recurses on the 5th 
+             component of the rule, which is the 'albody'.  Upon recursion one of six things will be included in the genrated function:
+             a call to another named rule, a call to matching a newline, a call to matching a tab, a call to matching a character, a call to a 
+             superior rule to matching characters, or the
+             results of composing recursive calls to the 'albody' rule."];
+
+    [:para~ "Finally in the genrated function if nothing was matched then failure is returned, otherwise success is both memoized and returned."];
+
+    [:para~ "The incorporating rule is signified by either a forwards slash or an equals sign:"];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- incorp =  w name w '/' inbody  w ';' w '\n'  ;
+ incorp =  .s name .s iflag inbody  .s ';' .s '\n'  ;
+ iflag  ? '/' | '=' ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
 
-    [:para~ "The accumulating rule is signified by an equals sign."];
+    [:para~ "The semantic action of matching an 'incorp' rule is to compose a new function that takes an input 
+             text and indicates if matches were found sequentially in the input text for all of the items listed
+             in the body of the 'incorp' rule."];
 
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
 
- accum =  w name w '=' acbody  w ';' w '\n'  ;
+ incorp  :smfnc="_s(a,m,s,e,c,n): return(T,T,s,e-s,c,(n,fi[s:e]))"
+         |def `.2.1`_p( s, c):
+         |  if been("`.2.1`",s): return was( c, "`.2.1`",s)
+         |  else:
+         |    mark("`.2.1`",s,(F,T,s,0,c,("",""))) 
+         |    ok=True; ts=s; tl=0; a={0: ("","")}
+         |    mem={0:True}; tc=c; n=0
+         |`#.5#` 
+         |    if ok:
+         |      rv=`.2.1`_s(a,andmemo(mem),s,ts+tl,tc,"`.2.1`")
+         |      return mark("`.2.1`",s,rv)
+         |    return mark("`.2.1`",s,(F,T,s,0,c,("","")))
+         |`("def "+.2.1+smfnc if .4.1 == "/" else "")`
+ .inbody |    if ok:
+         |      n=n+1; ( `(  "n" if .1.2.0 == "pnit" else "" )`ok,mem[n],ts,tl,tc,a[n])=\
+         |      `#.1.2.1 if .1.2.0=="pnit" else .1.2#`
+         |`#.1.3#`
+ .pnit   ^ "n"
+ .cmatch ^ #.1# 
+ .name   ^ .1 +"_p ( (ts+tl), tc)"
+ .cm     ^ "cm(\'" + .1 + "\',(ts+tl), tc)"
+ .bsl    ^ " cm(chr(92) ,(ts+tl), tc)"
+ .btk    ^ " cm(chr(39) ,(ts+tl), tc)"
+ .bqt    ^ " cm(chr(34) ,(ts+tl), tc)"
+ .bnl    ^ " cm(chr(10) ,(ts+tl), tc)"
 
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
 
-    [:para~ "A name is made up of one or more lowercase letters. "];
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
+
+    [:para~ "As with the previous rule, the first thing the produced function does is check to see if the same 
+             position in the source text has already been evaluated for matching that syntax rule. If so the function
+             returns the success or failure previously determined."];
+
+    [:para~ "If this is a new evaluation, the generated
+             function marks the location as failing the match and sets a flag (for not having failed a rule yet) to True."];
+
+    [:para~ "In the process of creating the generated function, the 'incorp' rule next recurses on the 5th 
+             component of the rule, which is the 'inbody'.  Upon recursion one of nine things will be included in the genrated function:
+             a call to another named rule, a call to matching a newline, a call to matching a tab, a call to matching a single quote, 
+             a call to matching a backslash, a call to matching a character, a call to a 
+             superior rule to matching characters, a call to matching a period (optional) named item, or the
+             results of composing recursive calls to the 'inbody' rule."];
+
+
+    [:para~ "Finally in the genrated function if everything was matched then the semantic function is called, after which success is both 
+             memoized and returned. Otherwise in the generated function failure is memoized and returned."];
+
+    [:para~ "If the rule being generated was marked with a slash then the incorp rule will generate an additional semantic function for the rule
+             that simply returns the extent of the source text matched as the result of that rule's semantic action. "];
+
+    [:para~ "A name is made up of one or more lowercase letters. The semantic action of matching the name rule is to return the letters making
+             up the name. "];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
@@ -3414,56 +3619,51 @@ d
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
 
     [:para~ "Within the rule ";[:mono~"albody" ] ; "
-             rule named items are separated by the vertical bar symbol."];
+             rule-named-items are separated by the vertical bar symbol. More alternatives may be found on the next line if the last thing on the 
+             albody line is a vertical bar symbol. For a semantic action, the albody rule returns the complete tuple of values available to it.
+             The almore semantic action however is to return the fourth item in the tuple of values available to it (e.g. the result of its 'albody'. "];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- albody = w nit .almore ;  
- almore =  w '|' albody ;  
+ albody = .s nit .almore ;  
+ almore = .s '|' .alnewline albody ;
+ alnewline / .s '\n' ;  
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
+
+ albody  ^ ..
+ almore  ^ .4
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
 
     [:para~ "Within the rule ";[:mono~"inbody" ] ; "
-             rule there may be multiple possibly period prefixed named items."];
+             rule there may be multiple possibly period prefixed named items. Like albody, inbody passes upwards everything it gets."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- inbody = w pnit .inbody ;  
+ inbody = .s onit .inbody ;  
+ onit ? pnit | nit ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
 
-    [:para~ "Within the rule ";[:mono~"acbody" ] ; "
-             rule there may be multiple possibly period prefixed or colon postfixed named items."];
+ inbody ^ .. 
 
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
-
- acbody = w pcnit .acbody ;  
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
 
     [:para~ "pnits are:"];
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- pnit = .'.' nit ;  
+ pnit = '.' nit ;  
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
 
-    [:para~ "cnits are:"];
+ pnit ^ .2 
 
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
-
- cnit =  nit .':' ;  
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
-
-    [:para~ "pcnits are:"];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
-
- pcnit ?  pnit | cnit | nit ;  
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
 
     [:para~ "A nit is a name or a character match."];
 
@@ -3478,101 +3678,769 @@ d
 
     [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
 
- cmatch = '\'' sch: '\'' ;
+ cmatch = '\'' sch '\'' ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,six-py ~  ( "
 
-    [:para~ "Alternative rule phrases in the rule body are reflected in the creation of an 'or'
-             action in the produced rule parse function."];
+ cmatch ^ .2 
 
-    [:para~ "A rule phrase consists of one or more items."];
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,six-py" ]];
 
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
+    [:para~ "To build the ibnf parser, first run the semantic rule parser on the ibnf semantic rules:"];
 
- phrase ::=  item. phrase. | item 
-      ~ ( do (callrule item)
-          then (callrule phrase)) ; 
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# python sixparser.py ibnf.six-py blank.txt ibnf-smtx.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
 
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:para~ "Combine the grammars and then run the syntax rule parser on the ibnf syntax rules and include the generated semantics as a parameter:"];
 
-    [:para~ "An item may be followed by a period or a colon or may be bare. 
-             Also, an item may be a name reference or may be a symbol comprised of 
-             characters enclosed in single quotes."];
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# cat ./common-chr.ibnf ./ibnf.ibnf > ./ibnf-full.ibnf
+# python ibnfmeta.py ibnf-full.ibnf ibnf-smtx.py ibnf.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
 
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
+    [:para~ "Run the generated parser on the very input that produced it, then do it again:"];
 
- item ::= itemp | itemc | itemb | quote. ; 
-         ~ match quote  ; 
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
-
-    [:para~ "Items followed by a period remember their names and 
-             collect their productions, while
-             Items followed by a colon remember their names and 
-             collect their text."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
-
- itemc ::= name. w ':' 
-         ~ ( callrule name; return name,extent ) ; 
- itemp ::= name. w '.' 
-         ~ ( callrule name; return name,image ) ; 
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
-
-    [:para~ "A bare item is satisfied by a named reference to another rule,
-             a quote item is satisfied when the literal text enclosed in quotes
-             is matched."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
-
- itemb ::= name.                     
-         ~ callrule name  ; 
- quote ::= '\'' chs.  '\'' 
-         ~ chs ; 
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
-
-
-    [:para~ "prod is the rule for describing productions in the body of a rule. Productions
-             are coded in the i programming language."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
-
- prod ::= '~' w istmt. |            
-        ~ sntx,i,parse istmt  ; 
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
-
-    [:para~ "The error rule provides a place for telling the user where things went wrong."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,ibnf,ibnf ~  ( "
-
- error ::= '!' w quote |   ; 
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,ibnf,ibnf" ]];
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# python ibnf.py ibnf-full.ibnf ibnf-smtx.py ibnfmeta2.py
+# python ibnfmeta2.py ibnf-full.ibnf ibnf-smtx.py ibnfmeta3.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
 
 
 
-  )];["The autogeneration of ibnf":sect~(
 
-    [:para~ "And now to tie it all together:"];
+  )];["Implementing six in ibnf/six":sect~(
 
-   [:code~
-`cap,env,lang,indp,sntx,ibnf,parse 'a  ~ (
-       sntx,ibnf,parse  sntx,ibnf,ibnf   ;
-  $ );
+    [:para~ "The previous section implemented a parser of syntax rules that allowed for the inclusion of 
+             externally generated semantic productions for those rules. This section implements a parser and generator
+             for those semantic rules. The separation of syntax from semantics allows syntax to be re-used
+             and semantics to be re-targeted."];
+
+    [:stxt~`cap,doc,req ~ ( 
+
+      [" ":ssct~(
+
+      [:para~ "2.4 Declare the syntax and semantics of six.  ";[:flush~];" 1/20/2013 \checkmark "]; 
+
+      [:skip~];
+
+    $);[:scpt~ "Goals, continued." ]];
+
+    [:para~ " ";[:mono~"six" ] ; " will use the common definitions introduced in the first section and introduces 
+             more defined in ";[:mono~"sntx,six,ibnf" ] ; " and
+             exported as  ";[:mono~"six.ibnf" ] ; ". The semantic rules for parsing 
+             six are defined in ";[:mono~"sntx,six,six-py" ] ; " and are
+             exported as  ";[:mono~"six.six-py" ] ; ". "];
+
+    [:code~
+
+`cap,env,lang,indp,sntx ~ ( [ six :~( [ ibnf :~ $ ];
+                                      [ six-py  :~ $ ]; $ )]; $ );
+    [:capt~ "Start with the basics." ]];
+
+    [:para~ "The result of processing the rules of sytax for six will be an six parser."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ syntax = srules end ;    
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ syntax ^ .1.1 + .2.1 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "The six parser consumes semantic rules and (as its own semantic function) emits the results of processing those rules into 
+             semantic functions, followed by some predefined values that may be used by semantic functions."];
+
+    [:para~ "The srules rule is defined recursively:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ srules = srule .srules ;    
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ srules ^ .1.1 + .2.1
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "The values of the rules (as semantic functions for inclusion in an ibnf parser) are returned concatenated together by the six parser."];
+
+    [:para~ "A srule is a blank line or a basic semantic definition."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ srule ? blankline | base ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+
+    [:para~ "Blank lines have optional whitespace and end in a newline character."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ blankline = .s '\n' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ blankline  ^   ""
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "A basic semantic definition has a name followed by some optional setup code, a body of program code 
+             that is produced when the syntax for
+             that named syntax component is matched by the parser, and then an optional sequence
+             of recursive definitions that may be refrenced by that body of code."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ base   =  .s name .setup body .recr;
+ body   ?  qlineset | cline  ;
+ setup  = .s ':' .s code .s '\n' .setup ;
+ recr   = .s '.' name .rsetup body .recr ;    
+ rsetup = .s ':' .s rcode .s '\n' .rsetup ;
+ rcode  = ritm .rcode ;
+
+
+ ritm ?     string |  rcr | lwr | dpathw | dhas | pnt | '>' | '<' |
+        '{' | '}' | ':' | '%' | '(' | ',' | ')' | '_' | '[' | ']' |
+                    ';' | '+' | '-' | '*' | '/' | '=' | '!' | ' ' ;    
+
+
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+
+    [:para~ "The body of program text may be  a set of 'quoted' text lines to be deposited as the resulting function's return value or it may be 
+             a singe code line, and the result of executing that code line is deposited as the resulting function's return value."];
+
+    [:para~ "The semantic implementation of the basic semantic rule declares a semantic function which 
+             conditionally includes setup code for a rule being parsed by that rule, will include 'body' code for returning 
+             a result for a rule being parsed by that rule, and which conditionaly
+             is followed by a recursive function definition for a semantic rule being parsed by that rule:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ base  :rbody="  o = \"\"\n  rx="+.2.1+"_r\n  if a != \"\":\n"+.5.1+"  return (o)\n" 
+       |def `.2.1`_s(a,m,s,e,c,n):
+       |`("  rx="+.2.1+"_r "  if .5.1 != "" else "")`
+       |`("  "+.3.1 if .3.1 != "" else "")`
+       |  return (T,T,s,e-s,c,( "`.2.1`", `.4.1` ))
+       |`("def "+.2.1+"_r(a,m,s,e,c,n):\n"+rbody if .5.1 != "" else "")`
+
+ setup  ^ ( ( .4.1 + "\n  " + .7.1) if .7.1 != "" else .4.1 )
+
+ rsetup ^ ( ( "      "+.4.1 + "      " + .7.1+"\n") if .7.1 != "" else "      "+.4.1+"\n" )
+
+ recr   ^ "    if a[0] ==\"" + .3.1 + "\":\n" + .4.1 + "      o=" + .5.1 +"\n"+ .6.1
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "A code line starts with a caret:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ cline    =  .s '^' .s code .s '\n' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ cline    ^ .4.1
+ 
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "A set of quoted lines have a vertical bar at the start of each:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ qlineset =  qlines ;
+ qlines   =  .s qlsep qline .qlines ;
+ qlsep    =  '|' ;
+ qline    =  qchs '\n' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ qlineset ^ "\"" + .1.1 + "\""
+ qlines   ^ .2.1 + .3.1 + .4.1
+ qlsep    ^ "\\n\" + \\\n\""
+ qline    ^ .1.1
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "A code line may be escaped with back-tics. The result of code within the back-tics
+             is inserted in-line with the quoted text:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ qchs   = .qch .qchs ;
+ qch    ? aln | qq | qt | qs | qsmb | ' ' | qcode  ;
+ qq     = '\"' ;
+ qt     = '\'' ;
+ qs     = '\\' ;
+
+
+ qcode = '`' .s code .s '`' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ qchs   ^ .1.1 + .2.1
+ qq     ^    "\\\""
+ qt     ^    "\\\'"
+ qs     ^    "\\\\"
+ qcode  ^ "\" + " + .3.1 + " + \""
+ 
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "A name is composed of lowercase letters:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ name / lwr .name ;    
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+
+    [:para~ "Quoted symbols may not include the back-tick, because that is used to escape the quoted text:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ qsmb   ? '-'|'_'|'+'|'='|'~'|'!'|'@'|'#'|'$'|'%'|'^'|'&'|'!'|'|'|'/'|
+            ':'|';'|'*'|'('|')'|'['|']'|'{'|'}'|','|'.'|'<'|'>'|'?' ; 
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+
+    [:para~ "Strings may be interrupted by newlines and 
+             continued on the next line after a continuation character:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ string  =  '\"' .strcs '\"' ;
+ strcs   =  sch .strcs ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ string  ^  "\"" + .2.1 + "\""  
+ strcs   ^  .1.1 + .2.1   
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "six-py is a pidgin of six syntax for data reference paths 
+             and recursive calls, and of python code. The pidgin is constructed 
+             of code item(s) and may span multiple lines when 
+             the newline is followed by a code continuation character:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ code = citm .code ;
+ citm ? string | cnl | rcr | lwr | upr | dpathw | dhas | pnt | '>' | '<' |
+         '{' | '}' | ':' | '%' | '(' | ',' | ')' | '_' | '[' | ']' |
+                     ';' | '+' | '-' | '*' | '/' | '=' | '!' | ' ' ;    
+ cnl = '\n' .s '^' ;
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ code     ^    .1.1  + .2.1 
+ cnl      ^    "\\\n"
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "Data reference paths are turned into python array dereferences:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ dpathw   =    dpath ;
+ dpath    =    '.' pnt .dpath ;
+ dhas     =    '.' '.' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ dpathw   ^    "a" + .1.1
+ dpath    ^    "[" + .2.1 + "]" + .3.1
+ dhas     ^    "a" 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+
+    [:para~ "Recursive calls are made between hash marks:"];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ rcr   ?    rca | rcb ;
+ rca   =    '#' .s name .s ':' .s code .s '#' ;
+ rcb   =    '#' .s code .s '#' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ rca   ^    .3.1 +"_s(" + .7.1 + ",m,s,e,c,n)[5][1]"
+ rcb   ^    "rx(" + .3.1 + ",m,s,e,c,n)"
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+    [:para~ "The parsing engine assembled by the ibnf/six system requires
+             some predefined functionality, which is encapsulatd in 
+             six in definitions for a prologue and an epilogue and which is placed
+             in the semantic output after all of the semantic rules. The syntax rule
+             for 'end' optionally matches whitespace, which will always succeed."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,six,ibnf ~  ( "
+
+ end   =  .s  ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,six,ibnf" ]];
+
+    [:para~ "The prologue and epilogue are included as simple global variable assignments that may
+             be referred to in other sematic productions (such as the production for 'syntax' in ibnf.)"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,six,six-py ~  ( "
+
+ end |prologue="""import sys
+     |from binascii import *
+     |fi = file(sys.argv[1]).read()
+     |semantics = file(sys.argv[2]).read()
+     |fo = open(sys.argv[3], "w+")
+     |
+     |h={}; registers={}; context={}; mseq=0; dseq=1; T=True; F=False
+     |
+     |def n2z( a ):
+     |  return ( '0' if a=='' else a )
+     |
+     |def be2le( a ):
+     |  return a[6:8]+a[4:6]+a[2:4]+a[0:2]
+     |
+     |def inclast( a ):
+     |  return a.rpartition(".")[0]+"."+str(int(a.rpartition(".")[2])+1)
+     |
+     |def unesc( a ):
+     |  return a.decode('string_escape')
+     |
+     |def mark( p, s, t ):
+     |  ( v, m, ss, l, c, a ) = t
+     |  if t[1]:  x = p +"-" + str(s);  h[x]=(v,m,l,a); return t
+     |  else:
+     |    if not t[0]:  x = p +"-" + str(s);  h[x]=(v,m,l,a); return t
+     |  return t
+     |
+     |def been(p, s):
+     | if h.has_key( p +"-" + str(s) ): return h[p +"-" + str(s)][1]
+     | else:  return False
+     |
+     |def was(c,p,s): (v,m,l,a) = h[p+"-"+str(s)]; return (v,m,s,l,c,a) 
+     |
+     |def cm( ch, s, c ):
+     |  if s < len(fi):
+     |    if fi[s] == ch:    return ( T, T, s, 1,  c, ( "cm", fi[s] ) )
+     |  return ( False, True, s, 0, c, ( "cm", "") )
+     |
+     |def andmemo( m ):
+     |  r = True
+     |  for i in m:
+     |    if not m[i]: r = False
+     |  return r
+     |
+     |outdata = ""
+     |
+     |def output( s ):
+     |  global outdata
+     |  outdata = outdata + str(s)
+     |
+     |"""; epilogue="""
+     |
+     |(v,m,s,l,c,a) = syntax_p( 0, ({},'<1>','<0>') )
+     |if v: 
+     |  print "Parsed "+a[0]+" OK"
+     |else: print "Failed to Parse"
+     |print >> fo, a[1] 
+     |fo.close()
+     |"""
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,six,six-py" ]];
+
+
+    [:para~ "To build the six parser, run the semantic rule parser on the six semantic rules:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# python sixparser.py six.six-py blank.txt six-smtx.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+    [:para~ "Combine the grammars and then run the syntax rule parser on the six syntax rules and include the generated semantics as a parameter:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# cat ./common-chr.ibnf ./six.ibnf > ./six-full.ibnf
+# python ibnfmeta.py six-full.ibnf six-smtx.py sixmeta.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+    [:para~ "Run the generated parser on the very input that produced it, then regenerate the semantics parser:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# python sixmeta.py six.six-py blank.txt six-smtx2.py
+# python ibnfmeta.py six-full.ibnf six-smtx2.py sixmeta2.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+    [:para~ "Rebuild the ibnf parser using the new semantic rule parser:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# python sixmeta2.py ibnf.six-py blank.txt ibnf-smtx.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+    [:para~ "Combine the grammars and then run the syntax rule parser on the ibnf syntax rules and include the generated semantics as a parameter:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# cat ./common-chr.ibnf ./ibnf.ibnf > ./ibnf-full.ibnf
+# python ibnfmeta.py ibnf-full.ibnf ibnf-smtx.py ibnf.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+    [:para~ "Run the generated parser on the very input that produced it, then do it again:"];
+
+    [:xtne~ `cap,env,tool,calc,calc.out ~  ( "
+# python ibnf.py ibnf-full.ibnf ibnf-smtx.py ibnfmeta2.py
+# python ibnfmeta2.py ibnf-full.ibnf ibnf-smtx.py ibnfmeta3.py
+  "; $ ); [:xcpe~ "cap,env,tool,calc,calc.out" ]];
+
+
+
+
+
+
+
+
+
+
+  )];["A toy compiler in ibnf/six":sect~(
+
+
+
+    [:para~ "The ibnf/six system can be used to create a compiler that produces machine code from source code
+             in a defined language syntax."];
+
+    [:stxt~`cap,doc,req ~ ( 
+
+      [" ":ssct~(
+
+      [:para~ "2.6 Craft a toy compiler in ibnf/six. ";[:flush~];" 2/8/2013 \checkmark "];
+
+      [:skip~];
+
+    $);[:scpt~ "Goals, continued." ]];
+
+    [:para~ "The toy syntax needs a place to reside."]; 
+
+    [:code~
+
+`cap,env,lang,indp,sntx ~ ( [ toy :~( [ ibnf :~ $ ];
+                                      [ six-py :~ $ ]; $ )]; $ );
+
     [:capt~ "parse the full syntax." ]];
 
-    [:para~ "The parsing function for the ibnf syntax is created by calling a parsing function for ibnf on the ibnf syntax. The parsing 
-             function used is not the parsing function being described but instead a previously existing parsing function provided by the
-             system, much like how previously existing assembly language definitions (described in Chapter 1) were used before they were defined."];
+    [:para~ "The syntax of a toy program will consist of a series of statement sequence lines."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,toy,ibnf ~  ( "
+
+    syntax  =  program end ;
+    program =  lines ;
+    lines   = .seq .s '\n' .lines ; 
+    seq     = .s stmt .more ;
+    more    = .s ';' seq ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,toy,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+    syntax ^ header + code + literals
+
+   program : # sizecode   : .1.1 #
+           : # countvars  : .1.1 #
+           : # makelit    : .1.1 #
+           : # emitcode   : .1.1 #
+           : print .1.1
+           | ok
+
+    lines  ^ ( "seq", .1.1 , .4.1 )
+    seq    ^ ( "seq", .2.1 , .3.1 )
+    more   ^ .3.1
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:para~ "The only statements for now are print, var, and exit."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,toy,ibnf ~  ( "
+
+    stmt    ?  lsprint | vsprint | vdef | exit ;
+    lsprint   = 'p' 'r' 'i' 'n' 't' .s lstring ;
+    vsprint   = 'p' 'r' 'i' 'n' 't' .s vname ;
+    vdef     = 'v' 'a' 'r' s vname .s '=' .s varable ;
+    vname   / lwr .vname ;
+    exit    = 'e' 'x' 'i' 't' .s exitvalue ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,toy,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+    lsprint  ^ ( "lsprint", .7.1 )
+    vsprint  ^ ( "vsprint", .7.1 )
+    vdef    ^ ( "vdef", .5.1, .9.1 )
+    exit   ^ ( "exit",  .6.1 )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:para~ "Only literal strings are printable right now, and one exits with an exit value."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,toy,ibnf ~  ( "
+
+    lstring = '\"' .strchs '\"' ;
+    strchs  = strch .strchs ;
+    strch   ? dgt | upr | lwr | smb | ' ' | '\t' | nsl | ntk | nqt | nnl | ntb ;
+    nsl     = bsl ;
+    ntk     = btk ;
+    nqt     = bqt ;
+    nnl     = bnl ;
+    ntb     = btb ;
+    varable   = '\"' .chs '\"' ;
+    exitvalue / pnt ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,toy,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+    strchs  ^ .1.1 + .2.1
+    nsl     ^ "\\"
+    ntk     ^ "\'"
+    nqt     ^ "\""
+    nnl     ^ "\n"
+    ntb     ^ "\t"
+    lstring  ^ ( "lstring", .2.1, str(s), str(len(.2.1)) )
+    varable    ^ ( "lstring", .2.1, str(s), str(len(.2.1)) )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,toy,ibnf ~  ( "
+
+    end  = .s ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,toy,ibnf" ]];
+
+    [:para~ "Before we do anything else we need to know how big the executable portion of the program is:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+  sizecode : global lstart
+           : lstart = int(# .. #)+232+4096+8
+           | ok
+   .seq    ^ str(0 + int(n2z(#.1#)) + int(n2z(#.2#)))
+   .exit   ^ str(len(unhexlify(# exitx : 0 # )))
+   .lsprint  ^ str(len(unhexlify( # lsprintx : (0,0) # )))
+   .vdef   ^ str(len(unhexlify( # vdefx : (0,0,0) # )))
+   .vsprint ^ str(len(unhexlify( # vsprintx : 0 # )))
 
 
-  )];["The i language in ibnf syntax":sect~(
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
 
-    [:para~ "The result of parsing the ibnf description of the i syntax will be a parser for i code."];
 
+    [:para~ "Making the literal pool:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+    makelit : global literals, llist, lend; llist = {}; lend = 0
+            : literals = # .. #
+            | ok
+   .seq     ^ #.1# + #.2#
+   .exit    ^ "" 
+   .lsprint   ^ #.1#
+   .lstring  : global llist, lend; llist[.2] = lend; lend = lend + len(.1)
+            ^ .1
+   .vdef    ^ #.2#
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+
+    [:para~ "Counting the local variables:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+  countvars : global vlist, vend; vlist = {}; vend = 0
+            : literals = # .. #
+            | ok
+   .seq     ^ #.1# + #.2#
+   .vdef    : global vlist, vend; vlist[.1] = vend; vend = vend + 1
+            | ok
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+
+    [:para~ "Emitting the code:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+  emitcode  : global lstart, code, vend
+            : code = unhexlify(# mkloclx : vend #) + # .. #
+            | ok
+   .seq     : global lstart, llist
+            ^  #.1# + #.2#
+   .exit    ^ unhexlify(# exitx : int(.1) # )
+   .lsprint ^ unhexlify( # lsprintx : ( int(.1.3),lstart+llist[.1.2]) # )
+   .vdef    ^ unhexlify( # vdefx : (lstart+llist[.2.2],vlist[.1],int(.2.3)) # )
+   .vsprint ^ unhexlify( # vsprintx : vlist[.1] # )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:para~ "'Assembly language' for each language construct, starting with making space for local variables:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+
+   mkloclx  ^ # decsp   : .. * 8  # +
+            ^ # esptoebp: .. # 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:para~ "To make an 'exit' system call, put 1 in eax and push the exit value on the stack then call interrupt 0x80."];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+   exitx    ^ # oneeax  : .. # + 
+            ^ # pushc   : ..  # +
+            ^ # decsp   : 4  # +
+            ^ # int     : 128  # 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:para~ "To make an 'write' system call with a string constant, put 4 in eax, push the length 
+             of the string, the location of the string and some padding on the stack, then call interrupt 0x80. When the system
+             call returns, remove the values from the stack."];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+   lsprintx ^ # pushc   : .0  # +
+            ^ # pushc   : .1  # +
+            ^ # pushc   : 1  # +
+            ^ # toeax   : 4  # +
+            ^ # decsp   : 4  # +
+            ^ # int     : 128  # +
+            ^ # incsp   : 16  # 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:para~ "To initialize a local variable to a string constant value, place the address of the string and the length of the 
+             string at the local variable's offset in the stack frame."];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+   vdefx    ^ # toeax   : .0 # +
+            ^ # ebpeax  :  .1 * 8 # +
+            ^ # toeax   :  .2   # +
+            ^ # ebpeax  : ( .1 * 8 ) + 4 # 
+
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:para~ "To make an 'write' system call with a string variable, retrieve and push the length 
+             of the string, retrieve and push the location of the string, put 4 in eax and some padding 
+             on the stack, then call interrupt 0x80. When the system
+             call returns, remove the values from the stack."];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+   vsprintx ^ # eaxebp  : ( .. *8)+4 # +
+            ^ # pusheax : .. # +
+            ^ # eaxebp  : ( .. *8) # +
+            ^ # pusheax : .. # +
+            ^ # pushc   : 1  # +
+            ^ # toeax   : 4  # +
+            ^ # decsp   : 4  # +
+            ^ # int     : 128  # +
+            ^ # incsp   : 16  # 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+    [:para~ "Machine code for the 'Assembly language':"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+   oneeax   ^ "31c040" 
+   esptoebp ^ "89e5" 
+   incsp    ^ "81c4" + be2le("%08X" % (..))
+   decsp    ^ "81ec" + be2le("%08X" % (..))
+   toeax    ^ "b8"   + be2le("%08X" % (..))
+   eaxebp   ^ "8b45" + "%02X" % (..)
+   ebpeax   ^ "8945" + "%02X" % (..)
+   pushc    ^ "68"   + be2le("%08X" % (..))
+   pusheax  ^ "50"
+   int      ^ "cd"   + "%02X" % (..)
+
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+
+    [:para~ "Building the mach-o program header:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,toy,six-py ~  ( "
+
+  end   : global header, code, literals
+        : hdr =       unhexlify("cefaedfe07000000030000000200000002000000CC000000")
+        : c1  =       unhexlify("00000000010000007c0000005f5f54455854000000000000")
+        : c1  = c1  + unhexlify("00000000001000000010000000000000")
+        : fsz =       unhexlify("00000000")
+        : c2  =       unhexlify("070000000500000001000000000000005f5f7465787400000000")
+        : c2  = c2  + unhexlify("0000000000005f5f5445585400000000000000000000E8100000")
+        : bsz =       unhexlify("00000000")
+        : c3  =       unhexlify("E800000002000000000000000000000000000000")
+        : c3  = c3  + unhexlify("00000000000000000500000050000000")
+        : c3  = c3  + unhexlify("01000000100000000000000000000000")
+        : c3  = c3  + unhexlify("00000000000000000000000000000000")
+        : c3  = c3  + unhexlify("00000000000000000000000000000000")
+        : c3  = c3  + unhexlify("E8100000000000000000000000000000")
+        : c3  = c3  + unhexlify("0000000000000000")
+        : fsz = unhexlify( be2le( "%08X" % (232 + len(code) + len(literals)) ))
+        : bsz = unhexlify( be2le( "%08X" % (len( code ) + len( literals )) ))
+        : header = hdr + c1 + fsz + c2 + bsz + c3 
+        | ok
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,toy,six-py" ]];
+
+
+    [:para~ "A toy compiler needs source code to compile:"];
+
+
+    [:xtne~ `cap,env,lang,indp,sntx,toy,test ~  ( "
+
+print "This is a test of the emergency broadcast sytsem. This is only a test.\n"
+var foo = "bar"
+var baz = "quux"
+print baz; print foo
+print "This is another print statement.\n"
+exit 42
+
+  "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,toy,test" ]];
+
+    [:para~ "Build the toy compiler semantics with sixparser then build the toy compiler with ibnfmeta:"];
+
+    [:xtne~ `cap,env,lang,indp,sntx,toy,test ~  ( "
+
+  python sixparser.py toy.six-py blank.txt toy-smtx.py
+  cat ./common-chr.ibnf ./toy.ibnf > ./toy-full.ibnf
+  python ibnfmeta.py toy-full.ibnf toy-smtx.py toy-compile.py
+
+  "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,toy,test" ]];
+
+    [:para~ "Compile the toy program source code with the toy compiler, then execute the toy executable:"];
+
+    [:xtne~ `cap,env,lang,indp,sntx,toy,test ~  ( "
+
+  python toy-compile.py test.toy blank.txt toy.out
+  chmod 755 toy.out
+  ./toy.out
+
+  "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,toy,test" ]];
+
+
+
+
+  )];["The i language in ibnf/six":sect~(
+
+    [:para~ "ibnf and six can be used to create a parser of the i language and a constructor of things expressed in that language."];
 
     [:stxt~`cap,doc,req ~ ( 
 
@@ -3583,34 +4451,54 @@ d
       [:para~ "--- not yet demonstrated"]; 
       [:skip~];
 
-    $);[:scpt~ "Requirements, continued." ]];
+    $);[:scpt~ "Goals, continued." ]];
 
-    [:para~ "i syntax needs a place to reside."]; 
+    [:para~ "i syntax and semantics need a place to reside."]; 
 
     [:code~
 
-`cap,env,lang,indp,sntx ~ ( [ i :~( [ ibnf :~ $ ]; $ )]; $ );
+`cap,env,lang,indp,sntx ~ ( [ i :~( [ ibnf :~ $ ];
+                                    [ six-py :~ $ ]; 
+                                    [ test :~ $ ]; $ )]; $ );
 
     [:capt~ "parse the full syntax." ]];
 
-    [:para~ "An i program at a high level description is a statement
-             of how its binary image is constructed. The syntax is in 
-             the form of an i statement, with optional white space, 
-             and the result of parsing that statement is the image."];
+    [:para~ "Something written in the i syntax (a.k.a i code) is at its simplest 
+             an i statement surrounded by optional whitespace."];
+
+    [:para~ "The result of parsing the source text should be an image as defined by the source text. An image is created (once
+             the icode is parsed) in several steps -- 1) make an abstract syntax tree, 2) make a mosaic from the tree; 3) collapse the mosaic into an image."];
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    syntax  =   w   istmt: w ; 
+  syntax  = icode ; 
+  icode   = w istmt w ; 
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  syntax ^ image
+  
+  icode  : global image; global st
+         : st = # maketree   : ( .2.0, (0,".0",-1,-1,0), .2 ) #
+         : ms = # makemosaic : st #; print "\n"; print st
+         : print "\n"; print ( .2.0, (0,".0",-1,-1,0), .2 ); image = ""
+         | ok
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
 
     [:para~ "Optional white space is a common feature of a syntax."];
 
-    [:xtnt~ `cap,env,lang,indp,sntx,common-chr,ibnf ~  ( "
+    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-     w  = .wsc: .w ;
+  w  = .wsc .w ;
 
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,common-chr,ibnf" ]];
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  w ^ .1
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
 
     [:mnot~ "statement" ] ;
     [:para~ "An i statement may be one of several things. The ibnf parser uses ordered choice 
@@ -3619,7 +4507,7 @@ d
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    istmt  ?  cmpnd | defn | expand | import | refr | mrkr | ltrl ;
+    istmt  ?   ltrl | cmpnd | defn | expand | import | refr | mrkr ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
 
@@ -3639,22 +4527,59 @@ d
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    istring     = '"' chs '"' ;
+    istring     = '\"' chs '\"' ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
-    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
 
-def istring_s ( a, m, s, e, c, n ): 
-  return  ( True, True, s, e-s, c,(n, a[2][1].decode('string_escape') ))
+  istring ^ ( "string", unesc(.2.1) ) 
 
-  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
 
-    [:para~ "With the above ibnf and semantic definitions, the following is valid i code:"];
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
-        "This is a text string!"  
-   "; $ ); [:xcpe~ "ibnf example" ]];
+    [:mnot~ "compound" ] ;
+    [:para~ "A compound statement is one or more statements (a phrase) in parentheses."];
 
+
+    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
+
+    cmpnd     = '(' w iphrase w ')' ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  cmpnd ^  .3.1 
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
+
+    [:mnot~ "phrase" ] ;
+    [:para~ "A phrase in i is either several statements separated by semicolons or just a statement by itself."];
+
+    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
+
+    iphrase     = istmt w .iphrasec ;
+    iphrasec    = ';' w iphrase ;
+
+  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  iphrase ^ ( "seq" , .1, .3  )
+  iphrasec ^ .3
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
+
+    [:para~ "i code may begin and end with parentheses, here's one to start things:"];
+
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
+(  
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
+
+    [:para~ "With the above ibnf and semantic definitions and assuming a closing parenthesis to match the opening one, the following is valid i code:"];
+
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
+        "this is a test string
+spanning\n three lines.";  
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
 
 
     [:mnot~ "number" ] ;
@@ -3682,9 +4607,14 @@ def istring_s ( a, m, s, e, c, n ):
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    hexbnum =  '0' 'X' hexdigitsb: ;
+    hexbnum =  '0' 'X' hexdigitsb ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  hexbnum ^ unhexlify( .3.1 )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
 
     [:mnot~ "little endian hex" ] ;
     [:para~ "Hexadecimal numbers with a lowercase x have a node created for them in the 
@@ -3692,9 +4622,14 @@ def istring_s ( a, m, s, e, c, n ):
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    hexlnum     = '0' 'x' hexdigitsl: ;
+    hexlnum     = '0' 'x' hexdigitsl ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  hexlnum ^ unhexlify( .3.1 )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
 
     [:mnot~ "hex digits" ] ;
     [:para~ "Hexadeximal digits include the regular digits and the letters A through F."];
@@ -3705,27 +4640,20 @@ def istring_s ( a, m, s, e, c, n ):
     hexdigitsl     =  hex hex .hexdigitsl ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
-    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
 
-def hexdigitsb_s ( a, m, s, e, c, n ):
- x=''
- if len(a[3])>1: x=a[3][1]
- return ( True, True, s, e-s, c,(n,chr(int(a[1][1]+a[2][1],16))+x ))
+  hexdigitsl ^ "" + .3.1 + .1.1 + .2.1 
+  hexdigitsb ^ "" + .1.1 + .2.1 + .3.1
 
-def hexdigitsl_s ( a, m, s, e, c, n ):
- x=''
- if len(a[3])>1: x=a[3][1]
- return ( True, True, s, e-s, c,(n,x+chr(int(a[1][1]+a[2][1],16)) ))
-
-  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
 
     [:para~ "With the above ibnf and semantic definitions, 
              the following two values are also valid i code (and they are equivalent):"];
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
-        0x4a3b2c1d
-        0X1D2C3B4A  
-   "; $ ); [:xcpe~ "ibnf example" ]];
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
+        0x41424344;
+        0X41424344;  
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
 
     [:para~ "A positive number may be floating point or an integer."];
 
@@ -3749,9 +4677,14 @@ def hexdigitsl_s ( a, m, s, e, c, n ):
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    dfract     =  integer:  ;
+    dfract     =  integer  ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  dfract ^ ""
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
 
     [:mnot~ "integer" ] ;
     [:para~ "An integer is one or more digits."];
@@ -3774,50 +4707,23 @@ def hexdigitsl_s ( a, m, s, e, c, n ):
     [:para~ "With the above ibnf definitions, 
              the following values are also valid:"];
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
-        3.14
-        512 
-        -25
-        -7.75 
-   "; $ ); [:xcpe~ "ibnf example" ]];
-
-    [:mnot~ "compound" ] ;
-    [:para~ "A compound statement is one or more statements (a phrase) in parentheses."];
-
-
-    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
-
-    cmpnd     = '(' w iphrase: w ')' ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
-
-    [:mnot~ "phrase" ] ;
-    [:para~ "A phrase in i is either several statements separated by semicolons or just a statement by itself."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
-
-    iphrase     = istmt w .iphrasec ;
-    iphrasec    = ';' w iphrase ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
-    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
-
-def iphrase_s ( a, m, s, e, c, n ):  return  ( True, True, s, e-s, c,(n,a[1], a[3]  ))
-def iphrasec_s ( a, m, s, e, c, n ):  return  ( True, True, s, e-s, c, a[3])
-
-  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
-
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
+        3.14;
+        512 ;
+        -25;
+        -7.75; 
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
 
     [:para~ "With statements and phrases defined as they are above, statements in sequence and nested parentheses are 
              implemented through rule recursion. Sequences like the following can be used:"];
 
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
       (  3.14; "This is a string";
         512 ;
        ( -25 ; 0XFFFFFFFF);
-        -7.75 )
-   "; $ ); [:xcpe~ "ibnf example" ]];
+        -7.75 );
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
 
 
     [:mnot~ "definition" ] ;
@@ -3825,12 +4731,17 @@ def iphrasec_s ( a, m, s, e, c, n ):  return  ( True, True, s, e-s, c, a[3])
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    defn = dpr .sq w '[' w .ddnm w ':' w .tsq w '~' w .istmt w ']' ; 
+    defn = .s .sq w '[' w .ddnm w ':' w .tsq w '~' w .istmt w ']' ; 
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  defn ^ ( .2, .6, .10, .14 )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def defn_s ( a, m, s, e, c, n ):
+def defn_s (a,m,s,e,c,n):
   (c0,c1,c2)=c; c0[c1]=a[14]  
   if len(a[2][1])>0: return ( True, False, s, e-s, (c0,c2[0],c2[1]),(n, "" ))
   else:   return ( True, False, s, e-s, (c0,c2[0],c2[1]),(n,a[14] ))
@@ -3841,11 +4752,11 @@ def defn_s ( a, m, s, e, c, n ):
     [:para~ "An example:"];
 
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
  (  [:~];
     [:~ "There are four" ];
-    [:~ [:~ "anonymous definitions here." ]] )
-   "; $ ); [:xcpe~ "ibnf example" ]];
+    [:~ [:~ "anonymous definitions here." ]] );
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
 
 
     [:mnot~ "Definition items" ] ;
@@ -3856,26 +4767,15 @@ def defn_s ( a, m, s, e, c, n ):
     ddnm  =  dnm ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  ddnm ^ .1.1
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def ddnm_s ( a, m, s, e, c, n ):
+def ddnm_s (a,m,s,e,c,n):
  (c0,c1,c2)=c; return ( True, False, s, e-s, (c0,a[1][1],c2),(n,fi[s:e] ))
-
-  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
-
-    [:mnot~ "definition preparation" ] ;
-    [:para~ "Definitions have semantic preparation required."];
-
-    [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
-
-    dpr     =  ;
-
-  "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
-    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
-
-def dpr_s ( a, m, s, e, c, n ):
- (c0,c1,c2)=c; global dseq ; dseq = dseq + 1  
- return ( True, False, s, e-s, (c0,'<'+str(dseq)+'>',(c1,c2)),(n, a ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -3909,11 +4809,74 @@ def dpr_s ( a, m, s, e, c, n ):
 
     [:para~ "And so definitions can be named:"];
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
  (  [ foo :~ 99 ];
     [ 'x frob 'y :~ "Yowza!" ];
-    [ nesting :~ [ definitions :~ 0X32333435 ]] )
-   "; $ ); [:xcpe~ "ibnf example" ]];
+    [ nesting :~ [ definitions :~ 0X3233343536373839 ]] );
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
+
+
+    [:para~ "In the AST tuple, the values are: 0) nest depth, 1) image offset, 2) logical offset, 3) size in image"];
+
+    [:para~ "Preprocessing the AST:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  maketree  ^ # .. #  
+  .cmpnd    : z =  #( .2.1.0, ( .1.0 + 1 , .1.1 + ".0",-1,-1,0), .2.1 )# 
+            ^ z
+  .iphrase  : z =  #( .2.1.0, .1, .2.1 )#
+            ^ z
+  .iphrasec ^  #( .2.1.0, .1, .2.1 )# 
+  .seq      : y = #( .2.1.0, .1, .2.1 )#; z = #( .2.2.0, ( .1.0, inclast(.1.1),-1,-1,0 ), .2.2 )#
+            ^ ( "seq", ( .1.0, .1.1,-1,-1,y[1][4]+(z[1][4] if z!="" else 0)),  y, z )
+  .istring  ^  #( .2.1.0, .1, .2.1 )# 
+  .string   ^ ( "string", ( .1.0 , .1.1,-1,-1,len(.2.1)),  .2.1  )
+  .hexlnum  ^ ( "hexbin", ( .1.0 , .1.1,-1,-1,len(.2.1)),  .2.1  )
+  .hexbnum  ^ ( "hexbin", ( .1.0 , .1.1,-1,-1,len(.2.1)),  .2.1  )
+  .nnum     ^ ( "nnum",   .1,  .2.1  )
+  .floatnum ^ ( "floatnum",   .1,  .2.1  )
+  .integer  ^ ( "integer",   .1,  .2.1  )
+  .defn     ^ ( "defn",   .1,  .2.1.1.1,  #( .2.1.3.0, ( .1.0 + 1 , .1.1 + ".0",-1,-1,0) , .2.1.3 )# )
+  .mrkr     ^ ( "mrkr",   .1,  "$" )
+  .refr     ^ ( "refr",   .1,  .2.1 )
+  .expand   ^ ( "expand",   .1,  .2.1 )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
+
+    [:para~ "Making the mosaic of images:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  makemosaic: global image
+            : # .. #
+            | ok
+  .seq      : # .2 #; # .3 #
+            | ok
+  .string   : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      String  ! "+ .2 
+            | ok
+  .hexbin   : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      Hexbin  ! "+ .2 
+            | ok
+  .nnum     : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      Nnum    ! "+ .2 
+            | ok
+  .floatnum : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      Floatnum! "+ .2 
+            | ok
+  .integer  : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      Integer ! "+ .2 
+            | ok
+  .defn     : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      Defn    !" + .2 ;  # .3 # 
+            | ok
+  .mrkr     : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      Mrkr    ! "+ str(.2) 
+            | ok
+  .refr     : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      Refr    ! "+ str(.2.1) 
+            | ok
+  .expand   : print str(.1.2)+" "+str(.1.3)+" "+str(.1.4)+" "+.1.1+"      Expand  ! "+ str(.2) 
+            | ok
+
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
+
+
+
 
     [:mnot~ "space qualifier" ] ;
     [:para~ "A space qualifier for a definition may provide a path to a space definition
@@ -3928,11 +4891,11 @@ def dpr_s ( a, m, s, e, c, n ):
 
     [:para~ "The binary image produced by the following is 'includedincluded'."];
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
  (   [ a :~ "included"     ];
     @[ b :~ "not included" ];
-     [ c :~ "included"     ] )
-   "; $ ); [:xcpe~ "ibnf example" ]];
+     [ c :~ "included"     ] );
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
 
     [:para~ "Once a thing is defined it can be referred to."];
 
@@ -3941,9 +4904,14 @@ def dpr_s ( a, m, s, e, c, n ):
     refr     = path ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  refr ^ ( "refr" , "not implemented" )
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def refr_s ( a, m, s, e, c, n ): 
+def refr_s (a,m,s,e,c,n): 
   if c[0].has_key(fi[s:e]): return ( True, False, s, e-s, c,(n, c[0][fi[s:e]]))
   else: return (False, False, s, e-s, c,(n, fi[s:e]))
 
@@ -3980,12 +4948,12 @@ def refr_s ( a, m, s, e, c, n ):
 
     [:para~ "With the above syntax and semantics rules the following can be done:"];
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
     (@[ X Y definition : ~ "second" ];
       [ X Z definition : ~ "first" ];
         0xaabbccdd;
-        X Y definition )
-   "; $ ); [:xcpe~ "ibnf example" ]];
+        X Y definition );
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
 
     [:mnot~ "marker" ] ;
     [:para~ "In the i programming language, the dollar-sign is a marker for the lexical location that will accept future
@@ -3996,9 +4964,14 @@ def refr_s ( a, m, s, e, c, n ):
     mrkr     = '$' ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  mrkr ^ ""
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def mrkr_s ( a, m, s, e, c, n ): 
+def mrkr_s (a,m,s,e,c,n): 
   (c0,c1,c2)=c; global mseq ; mseq = mseq + 1
   nm='>'+str(c1)+'<'
   c0[nm]=(''); return ( True, False, s, e-s, (c0, c1, c2),(n, nm  ))
@@ -4015,9 +4988,14 @@ def mrkr_s ( a, m, s, e, c, n ):
     expand     = '`' w path w '~' w istmt ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,six-py ~  ( "
+
+  expand ^ ""
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,six-py" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def expand_s ( a, m, s, e, c, n ): 
+def expand_s (a,m,s,e,c,n): 
   (c0,c1,c2)=c;  key=">"+a[3][1]+"<"
   print "exapnding "+key
   if c0.has_key(key):
@@ -4031,11 +5009,11 @@ def expand_s ( a, m, s, e, c, n ):
 
     [:para~ "The following i code shows reserving a spot for expansion and then expanding it later:"];
 
-    [:xtne~ `cap,doc,literaltext ~  ( "
+    [:xtne~ `cap,env,lang,indp,sntx,i,xtest ~  ( "
  (  @[ a :~ $     ];
      [ b :~ "second" ];
-      `a :~ "first"      )
-   "; $ ); [:xcpe~ "ibnf example" ]];
+      `a :~ "first"      );
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,xtest" ]];
 
     [:mnot~ "import" ] ;
     [:para~ "A lexical import of an item defined elsewhere in the abstract syntax tree is a path to that item prefaced by a caret."];
@@ -4043,9 +5021,15 @@ def expand_s ( a, m, s, e, c, n ):
 
     [:xtnt~ `cap,env,lang,indp,sntx,i,ibnf ~  ( "
 
-    import     = '^' w path: ;
+    import     = '^' w path ;
 
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
+    [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
+
+def import_s (a,m,s,e,c,n): 
+  return  ( True, True, s, e-s, c,(n, a[3] ))
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
 
     [:mnot~ "typeseq" ] ;
@@ -4058,7 +5042,7 @@ def expand_s ( a, m, s, e, c, n ):
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def tsq_s ( a, m, s, e, c, n ): return ( True, True, s, e-s, c,(n, fi[s:e] ))
+def tsq_s (a,m,s,e,c,n): return ( True, True, s, e-s, c,(n, fi[s:e] ))
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
 
@@ -4073,7 +5057,7 @@ def tsq_s ( a, m, s, e, c, n ): return ( True, True, s, e-s, c,(n, fi[s:e] ))
   "; $ ); [:xcpt~ "cap,env,lang,indp,sntx,i,ibnf" ]];
     [:xtns~ `cap,env,lang,indp,sntx,i,smtx ~  ( "
 
-def typeref_s ( a, m, s, e, c, n ): return ( True, True, s, e-s, c,(n, anot( typ( deref (a[0] ))) ))
+def typeref_s (a,m,s,e,c,n): return ( True, True, s, e-s, c,(n, anot( typ( deref (a[0] ))) ))
 
 spcs = "                                                                                                   "
 
@@ -4102,6 +5086,12 @@ def rbuild (v,m,s,l,c,a,d):
 
 
   "; $ ); [:xcps~ "cap,env,lang,indp,sntx,i,smtx" ]];
+
+    [:para~ "A close parentheses to end our example text:"];
+
+    [:xtne~ `cap,env,lang,indp,sntx,i,test ~  ( "
+ " end of example text " )  
+   "; $ ); [:xcpe~ "cap,env,lang,indp,sntx,i,test" ]];
 
 
 
@@ -4154,6 +5144,507 @@ Reynolds, John C. 1972. Definitional interpreters for higher-order programming l
     [:capt~ "We want your source code." ]];
 
 
+
+  )];["ibnf syntax bootstrapping":sect~(
+
+
+    [:para~ "Here's the six-py for ibnf."];
+
+
+
+
+    [:para~ "The syntax parsing code generated when 
+             applying ibnf rules to themselves is as follows:."];
+
+
+
+
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,smtx ~  ( "
+
+def syntax_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "syntax", prologue + a[1][1] + semantics + epilogue  ))
+
+def rules_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "rules", a[1][1] + a[2][1]  ))
+
+def blankline_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "blankline", ""  ))
+
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,smtx" ]];
+
+    [:para~ "The first rule composes our parsing program from a prologue 
+             containing program code setting up the execution environment, 
+             the result of parsing our syntax, program code implenenting the semantics
+             of successfuly parsed syntax, and an epilogue of program code."];
+
+    [:para~ "The next two rules accumulte rules and excluede blank lines."];
+
+    [:para~ "The alternate rule is quite a bit more complex as in this implementation 
+             it produces the python code for parsing an alternating rule:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,smtx ~  ( "
+
+def altern_s(a,m,s,e,c,n):
+
+  rx=altern_r ;  return (T,T,s,e-s,c,( "altern", "\n" + \
+"def " + a[2][1] + "_p( s, c):\n" + \
+"  if been(\"" + a[2][1] + "\",s): return was( c, \"" + a[2][1] + "\",s)\n" + \
+"  else:\n" + \
+"    mark(\"" + a[2][1] + "\",s,(F,T,s,0,c,(\"\",\"\")));met = F \n" + \
+"" + rx(a[5],m,s,e,c,n) + " \n" + \
+"    if not met:\n" + \
+"      return mark(\"" + a[2][1] + "\",s,(F,T,s,0,c,(\"\",\"\")))\n" + \
+"    else:\n" + \
+"      return mark(\"" + a[2][1] + "\",s,(met,mem,s,tl,tc,ta)) " ))
+def altern_r(a,m,s,e,c,n):
+  o = ""
+  rx=altern_r
+  if a != "":
+    if a[0] =="albody":
+      o=rx(a[1][2],m,s,e,c,n)  + rx(a[1][3][1],m,s,e,c,n)
+    if a[0] =="cmatch":
+      o=rx(a[1],m,s,e,c,n)
+    if a[0] =="cm":
+      o="\n" + \
+"    if not met: (met,mem,ts,tl,tc,ta)=cm(\'" + a[1] + "\',s,c)"
+    if a[0] =="btb":
+      o="\n" + \
+"    if not met: (met,mem,ts,tl,tc,ta)=cm(\'" + a[1] + "\',s,c)"
+    if a[0] =="bnl":
+      o="\n" + \
+"    if not met: (met,mem,ts,tl,tc,ta)=cm(\'" + a[1] + "\',s,c)"
+    if a[0] =="name":
+      o="\n" + \
+"    if not met: (met,mem,ts,tl,tc,ta)=" + a[1] + "_p(s,c)"
+  return (o)
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,smtx" ]];
+
+    [:para~ "Similarly the incorprating rule:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,smtx ~  ( "
+
+def incorp_s(a,m,s,e,c,n):
+  smfnc="_s(a,m,s,e,c,n): return(T,T,s,e-s,c,(n,fi[s:e]))"
+  rx=incorp_r ;  return (T,T,s,e-s,c,( "incorp", "\n" + \
+"def " + a[2][1] + "_p( s, c):\n" + \
+"  if been(\"" + a[2][1] + "\",s): return was( c, \"" + a[2][1] + "\",s)\n" + \
+"  else:\n" + \
+"    mark(\"" + a[2][1] + "\",s,(F,T,s,0,c,(\"\",\"\"))) \n" + \
+"    ok=True; ts=s; tl=0; a={0: (\"\",\"\")}\n" + \
+"    mem={0:True}; tc=c; n=0\n" + \
+"" + rx(a[5],m,s,e,c,n) + " \n" + \
+"    if ok:\n" + \
+"      rv=" + a[2][1] + "_s(a,andmemo(mem),s,ts+tl,tc,\"" + a[2][1] + "\")\n" + \
+"      return mark(\"" + a[2][1] + "\",s,rv)\n" + \
+"    return mark(\"" + a[2][1] + "\",s,(F,T,s,0,c,(\"\",\"\")))\n" + \
+"" + ("def "+a[2][1]+smfnc if a[4][1] == "/" else "") + "" ))
+def incorp_r(a,m,s,e,c,n):
+  o = ""
+  rx=incorp_r
+  if a != "":
+    if a[0] =="inbody":
+      o="\n" + \
+"    if ok:\n" + \
+"      n=n+1; ( " + (  "n" if a[1][2][0] == "pnit" else "" ) + "ok,mem[n],ts,tl,tc,a[n])=\\\n" + \
+"      " + rx(a[1][2][1] if a[1][2][0]=="pnit" else a[1][2],m,s,e,c,n) + "\n" + \
+"" + rx(a[1][3],m,s,e,c,n) + ""
+    if a[0] =="pnit":
+      o="n"
+    if a[0] =="cmatch":
+      o=rx(a[1],m,s,e,c,n) 
+    if a[0] =="name":
+      o=a[1] +"_p ( (ts+tl), tc)"
+    if a[0] =="cm":
+      o="cm(\'" + a[1] + "\',(ts+tl), tc)"
+    if a[0] =="bsl":
+      o=" cm(chr(92) ,(ts+tl), tc)"
+    if a[0] =="btk":
+      o=" cm(chr(39) ,(ts+tl), tc)"
+    if a[0] =="bqt":
+      o=" cm(chr(34) ,(ts+tl), tc)"
+    if a[0] =="bnl":
+      o=" cm(chr(10) ,(ts+tl), tc)"
+  return (o)
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,smtx" ]];
+
+    [:para~ "The remainder of the rule genrating semantics are simple:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,smtx ~  ( "
+
+def almore_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "almore", a[4] ))
+
+def albody_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "albody", a ))
+
+def inbody_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "inbody", a  ))
+
+def pnit_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "pnit", a[2]  ))
+
+def cmatch_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "cmatch", a[2]  ))
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,smtx" ]];
+
+
+
+    [:para~ "The above rules should be auto-generated."];
+
+
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,smtx ~  ( "
+
+def build (v,m,s,l,c,a): return 'success'
+
+T=True; F=False
+
+prologue = """import sys
+from binascii import *
+
+fi = file(sys.argv[1]).read()
+semantics = file(sys.argv[2]).read()
+fo = open(sys.argv[3], "w+")
+
+h={}; registers={}; context={}; mseq=0; dseq=1; T=True; F=False
+
+def n2z( a ):
+  return ( '0' if a=='' else a )
+
+def be2le( a ):
+  return a[6:8]+a[4:6]+a[2:4]+a[0:2]
+
+def inclast( a ):
+  return a.rpartition(".")[0]+"."+str(int(a.rpartition(".")[2])+1)
+
+def unesc( a ):
+  return a.decode('string_escape')
+
+def mark( p, s, t ):
+  ( v, m, ss, l, c, a ) = t
+  if t[1]:  x = p +"-" + str(s);  h[x]=(v,m,l,a); return t
+  else:
+    if not t[0]:  x = p +"-" + str(s);  h[x]=(v,m,l,a); return t
+  return t
+
+def been(p, s):
+ if h.has_key( p +"-" + str(s) ): return h[p +"-" + str(s)][1]
+ else:  return False
+
+def was(c,p,s): (v,m,l,a) = h[p+"-"+str(s)]; return (v,m,s,l,c,a) 
+
+def cm( ch, s, c ):
+  if s < len(fi):
+    if fi[s] == ch:    return ( T, T, s, 1,  c, ( "cm", fi[s] ) )
+  return ( False, True, s, 0, c, ( "cm", "") )
+
+def andmemo( m ):
+  r = True
+  for i in m:
+    if not m[i]: r = False
+  return r
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,smtx" ]];
+
+    [:para~ "TBD."];
+
+
+    [:xtns~ `cap,env,lang,indp,sntx,ibnf,smtx ~  ( "
+
+
+outdata = ""
+
+def output( s ):
+  global outdata
+  outdata = outdata + str(s)
+"""
+
+epilogue = """
+(v,m,s,l,c,a) = syntax_p( 0, ({},'<1>','<0>') )
+if v: 
+  print "Parsed "+a[0]+" OK"
+else: print "Failed to Parse"
+
+
+print >> fo, a[1] 
+
+fo.close()"""
+
+outdata = ""
+
+def output( s ):
+  global outdata
+  outdata = outdata + str(s)
+
+
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,ibnf,smtx" ]];
+
+    [:para~ "TBD."];
+
+
+
+    [:para~ "Here is what the semantic transformation turns the sibnf semantics into:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,sibnf,smtx ~  ( "
+
+def syntax_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "syntax", a[1][1] + a[2][1]  ))
+
+def srules_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "srules", a[1][1] + a[2][1] ))
+
+def blankline_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "blankline", "" ))
+
+def base_s(a,m,s,e,c,n):
+
+  rbody="  o = \"\"\n  rx="+a[2][1]+"_r\n  if a != \"\":\n"+a[5][1]+"  return (o)\n" 
+  return (T,T,s,e-s,c,( "base", "\n" + \
+"def " + a[2][1] + "_s(a,m,s,e,c,n):\n" + \
+"" + ("  rx="+a[2][1]+"_r "  if a[5][1] != "" else "") + "\n" + \
+"" + ("  "+a[3][1] if a[3][1] != "" else "") + "\n" + \
+"  return (T,T,s,e-s,c,( \"" + a[2][1] + "\", " + a[4][1] + " ))\n" + \
+"" + ("def "+a[2][1]+"_r(a,m,s,e,c,n):\n"+rbody if a[5][1] != "" else "") + "" ))
+
+def setup_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "setup", ( ( a[4][1] + "\n  " + a[7][1]) if a[7][1] != "" else a[4][1] ) ))
+
+def rsetup_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "rsetup", ( ( "      " + a[4][1] + "\n      " + a[7][1]+"\n") if a[7][1] != "" else "\n      "+a[4][1]+"\n" ) ))
+
+def recr_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "recr", "    if a[0] ==\"" + a[3][1] + "\":\n" + a[4][1] + "      o=" + a[5][1] +"\n"+ a[6][1] ))
+
+def cline_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "cline", a[4][1] ))
+
+def qlineset_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qlineset", "\"" + a[1][1] + "\"" ))
+
+def qlines_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qlines", a[2][1] + a[3][1] + a[4][1] ))
+
+def qlsep_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qlsep", "\\n\" + \\\n\"" ))
+
+def qline_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qline", a[1][1] ))
+
+def qchs_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qchs", a[1][1] + a[2][1] ))
+
+def qq_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qq", "\\\"" ))
+
+def qt_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qt", "\\\'" ))
+
+def qs_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qs", "\\\\" ))
+
+def qcode_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "qcode", "\" + " + a[3][1] + " + \"" ))
+
+def string_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "string", "\"" + a[2][1] + "\""   ))
+
+def strcs_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "strcs", a[1][1] + a[2][1]    ))
+
+def code_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "code", a[1][1]  + a[2][1]  ))
+
+def rcode_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "rcode", a[1][1]  + a[2][1]  ))
+
+def cnl_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "cnl", "\\\n" ))
+
+def dpathw_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "dpathw", "a" + a[1][1] ))
+
+def dpath_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "dpath", "[" + a[2][1] + "]" + a[3][1] ))
+
+def dhas_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "dhas", "a"  ))
+
+def rca_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "rca", a[3][1] +"_s(" + a[7][1] + ",m,s,e,c,n)[5][1]" ))
+
+def rcb_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "rcb", "rx(" + a[3][1] + ",m,s,e,c,n)" ))
+
+
+def end_s(a,m,s,e,c,n):
+  return (T,T,s,e-s,c,( "end", "\n" + \
+
+"prologue=\"\"\"import sys\n" + \
+"from binascii import *\n" + \
+"fi = file(sys.argv[1]).read()\n" + \
+"semantics = file(sys.argv[2]).read()\n" + \
+"fo = open(sys.argv[3], \"w+\")\n" + \
+"\n" + \
+"h={}; registers={}; context={}; mseq=0; dseq=1; T=True; F=False\n" + \
+"\n" + \
+"def n2z( a ):\n" + \
+"  return ( \'0\' if a==\'\' else a )\n" + \
+"\n" + \
+"def be2le( a ):\n" + \
+"  return a[6:8]+a[4:6]+a[2:4]+a[0:2]\n" + \
+"\n" + \
+"def inclast( a ):\n" + \
+"  return a.rpartition(\".\")[0]+\".\"+str(int(a.rpartition(\".\")[2])+1)\n" + \
+"\n" + \
+"def unesc( a ):\n" + \
+"  return a.decode(\'string_escape\')\n" + \
+"\n" + \
+"def mark( p, s, t ):\n" + \
+"  ( v, m, ss, l, c, a ) = t\n" + \
+"  if t[1]:  x = p +\"-\" + str(s);  h[x]=(v,m,l,a); return t\n" + \
+"  else:\n" + \
+"    if not t[0]:  x = p +\"-\" + str(s);  h[x]=(v,m,l,a); return t\n" + \
+"  return t\n" + \
+"\n" + \
+"def been(p, s):\n" + \
+" if h.has_key( p +\"-\" + str(s) ): return h[p +\"-\" + str(s)][1]\n" + \
+" else:  return False\n" + \
+"\n" + \
+"def was(c,p,s): (v,m,l,a) = h[p+\"-\"+str(s)]; return (v,m,s,l,c,a) \n" + \
+"\n" + \
+"def cm( ch, s, c ):\n" + \
+"  if s < len(fi):\n" + \
+"    if fi[s] == ch:    return ( T, T, s, 1,  c, ( \"cm\", fi[s] ) )\n" + \
+"  return ( False, True, s, 0, c, ( \"cm\", \"\") )\n" + \
+"\n" + \
+"def andmemo( m ):\n" + \
+"  r = True\n" + \
+"  for i in m:\n" + \
+"    if not m[i]: r = False\n" + \
+"  return r\n" + \
+"\n" + \
+"outdata = \"\"\n" + \
+"\n" + \
+"def output( s ):\n" + \
+"  global outdata\n" + \
+"  outdata = outdata + str(s)\n" + \
+"\n" + \
+"\"\"\"; epilogue=\"\"\"\n" + \
+"\n" + \
+"(v,m,s,l,c,a) = syntax_p( 0, ({},\'<1>\',\'<0>\') )\n" + \
+"if v: \n" + \
+"  print \"Parsed \"+a[0]+\" OK\"\n" + \
+"else: print \"Failed to Parse\"\n" + \
+"print >> fo, a[1] \n" + \
+"fo.close()\n" + \
+"\"\"\"" ))
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,sibnf,smtx" ]];
+
+    [:para~ "And finally the epilogue:"];
+
+    [:xtns~ `cap,env,lang,indp,sntx,sibnf,smtx ~  ( "
+
+def build (v,m,s,l,c,a): return 'success'
+
+T=True; F=False
+
+prologue = """import sys
+from binascii import *
+
+fi = file(sys.argv[1]).read()
+semantics = file(sys.argv[2]).read()
+fo = open(sys.argv[3], "w+")
+
+h={}; registers={}; context={}; mseq=0; dseq=1; T=True; F=False
+
+def n2z( a ):
+  return ( '0' if a=='' else a )
+
+def be2le( a ):
+  return a[6:8]+a[4:6]+a[2:4]+a[0:2]
+
+def inclast( a ):
+  return a.rpartition(".")[0]+"."+str(int(a.rpartition(".")[2])+1)
+
+def unesc( a ):
+  return a.decode('string_escape')
+
+def mark( p, s, t ):
+  ( v, m, ss, l, c, a ) = t
+  if t[1]:  x = p +"-" + str(s);  h[x]=(v,m,l,a); return t
+  else:
+    if not t[0]:  x = p +"-" + str(s);  h[x]=(v,m,l,a); return t
+  return t
+
+def been(p, s):
+ if h.has_key( p +"-" + str(s) ): return h[p +"-" + str(s)][1]
+ else:  return False
+
+def was(c,p,s): (v,m,l,a) = h[p+"-"+str(s)]; return (v,m,s,l,c,a) 
+
+def cm( ch, s, c ):
+  if s < len(fi):
+    if fi[s] == ch:    return ( T, T, s, 1,  c, ( "cm", fi[s] ) )
+  return ( False, True, s, 0, c, ( "cm", "") )
+
+def andmemo( m ):
+  r = True
+  for i in m:
+    if not m[i]: r = False
+  return r
+
+outdata = ""
+
+def output( s ):
+  global outdata
+  outdata = outdata + str(s)
+
+"""
+
+epilogue = """
+
+q3 = chr(34)+chr(34)+chr(34)
+predefs = "prologue="+q3+prologue+q3+"; epilogue="+q3+epilogue+q3
+
+(v,m,s,l,c,a) = syntax_p( 0, ({},'<1>','<0>') )
+if v: 
+  print "Parsed "+a[0]+" OK"
+else: print "Failed to Parse"
+print >> fo, a[1] 
+fo.close()
+"""
+
+outdata = ""
+
+def output( s ):
+  global outdata
+  outdata = outdata + str(s)
+
+q3 = chr(34)+chr(34)+chr(34)
+predefs = "prologue="+q3+prologue+q3+"; epilogue="+q3+epilogue+q3
+
+  "; $ ); [:xcps~ "cap,env,lang,indp,sntx,sibnf,smtx" ]];
+
+    [:para~ "TBD."];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   )]);@[ "Kernels and Runtimes" :chap~(
      [:prel~(
 
@@ -4193,7 +5684,7 @@ Reynolds, John C. 1972. Definitional interpreters for higher-order programming l
 
 
   )]);@[ "Bootstrapping Development" :chap~(
-    [:para~ " ";[:itlc~"Requirement --- Bootstrap Development." ] ; " ";[:flush~];" 01/01/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Bootstrap Development." ] ; " ";[:flush~];" 01/01/2009 \checkmark "]; 
 
      [:prel~(
 
@@ -4247,14 +5738,14 @@ Reynolds, John C. 1972. Definitional interpreters for higher-order programming l
 
 
   )];["Unpacking the source code":sect~(
-    [:para~ " ";[:itlc~"Requirement --- Unpack Bootstrap Files." ] ; " ";[:flush~];" 12/12/2009 \checkmark "]; 
+    [:para~ " ";[:itlc~"Goal --- Unpack Bootstrap Files." ] ; " ";[:flush~];" 12/12/2009 \checkmark "]; 
 
     [:para~ "Those programs are,
              of course, included in the source text for cap as follows:"];
 
     [:code~
-`cap,env ~ ( [ bootstrap :~ ( [ cap.xtrall.sh    :~ $ ];  
-                              [ cap.xtrfile.sh   :~ $ ];  
+`cap,env ~ ( [ bootstrap :~ ( [ xta.sh           :~ $ ];  
+                              [ xtf.sh           :~ $ ];  
                               [ i2l.sh           :~ $ ];  
                               [ cap.bookpre.txt  :~ $ ];  
                               [ pro.py           :~ $ ];  
@@ -4268,31 +5759,42 @@ Reynolds, John C. 1972. Definitional interpreters for higher-order programming l
     [:para~ "The first script uses the Unix shell and the second script to extract all of the bootstrapping files in this chapter as well as
              other places."];
 
-    [:xtnt~ `cap,env,bootstrap,cap.xtrall.sh ~  ( "
+    [:xtnt~ `cap,env,bootstrap,xta.sh ~  ( "
 #!/bin/bash
-# This is cap.xtrall.sh
- ./cap.xtrfile.sh "cap,env,bootstrap,cap.xtrall.sh"    cap.xtrall.sh
- ./cap.xtrfile.sh "cap,env,bootstrap,cap.xtrfile.sh"   cap.xtrfile.sh
- ./cap.xtrfile.sh "cap,env,bootstrap,i2l.sh"           i2l.tmp 
- sed -e 's/vbtm/verbatim/g' i2l.tmp >                  i2l.sh
- ./cap.xtrfile.sh "cap,env,bootstrap,cap.bookpre.txt"  cap.bookpre.txt
- ./cap.xtrfile.sh "cap,env,bootstrap,pro.py"           pro.py
- ./cap.xtrfile.sh "cap,env,bootstrap,i2py.sh"          i2py.sh
- ./cap.xtrfile.sh "cap,env,bootstrap,s2py.sh"          s2py.sh
- ./cap.xtrfile.sh "cap,env,bootstrap,epi.py"           epi.py
- ./cap.xtrfile.sh "cap,env,tool,calc,syntax"           calc.ibnf
- ./cap.xtrfile.sh "cap,env,bootstrap,smtx.py"          smtx.py
- ./cap.xtrfile.sh "cap,env,tool,calc,test.calc"        test.calc
- ./cap.xtrfile.sh "cap,env,bootstrap,cap.ibnfsmntx.sh" cap.ibnfsmntx.sh
- ./cap.xtrfile.sh "cap,env,bootstrap,autosmtx.py"      autosmtx.py
- ./cap.xtrfile.sh "cap,env,bootstrap,README"           README
- ./cap.xtrfile.sh "cap,env,bootstrap,cap.mkinterp.sh"  cap.mkinterp.sh
- ./cap.xtrfile.sh "cap,env,lang,indp,sntx,common-chr,ibnf" common-chr.ibnf
- ./cap.xtrfile.sh "cap,env,lang,indp,sntx,common-ari,ibnf" common-ari.ibnf
- ./cap.xtrfile.sh "cap,env,lang,indp,sntx,i,ibnf"      i.ibnf
- ./cap.xtrfile.sh "cap,env,lang,indp,sntx,i,smtx"      i.smtx
- chmod 755 cap.*.sh ; ./cap.mkinterp.sh
-  "; $ ); [:xcpt~ "cap,env,bootstrap,cap.xtrall.sh" ]];
+# This is xta.sh
+ ./xtf.sh "cap,env,bootstrap,xta.sh"                    xta.sh
+ ./xtf.sh "cap,env,bootstrap,xtf.sh"                    xtf.sh
+ ./xtf.sh "cap,env,bootstrap,i2l.sh"                    i2l.tmp 
+ sed -e 's/vbtm/verbatim/g' i2l.tmp >                   i2l.sh
+ ./xtf.sh "cap,env,bootstrap,cap.bookpre.txt"           cap.bookpre.txt
+ ./xtf.sh "cap,env,bootstrap,pro.py"                    pro.py
+ ./xtf.sh "cap,env,bootstrap,i2py.sh"                   i2py.sh
+ ./xtf.sh "cap,env,bootstrap,s2py.sh"                   s2py.sh
+ ./xtf.sh "cap,env,bootstrap,epi.py"                    epi.py
+ ./xtf.sh "cap,env,lang,indp,sntx,calc-example,ibnf"    calc-example.ibnf sntx
+ ./xtf.sh "cap,env,lang,indp,sntx,calc-example,six-py"  calc-example.six-py
+ ./xtf.sh "cap,env,bootstrap,smtx.py"          smtx.py
+ ./xtf.sh "cap,env,lang,indp,sntx,calc-example,input"         calc-example.input 
+ ./xtf.sh "cap,env,bootstrap,cap.ibnfsmntx.sh" cap.ibnfsmntx.sh
+ ./xtf.sh "cap,env,bootstrap,autosmtx.py"      autosmtx.py
+ ./xtf.sh "cap,env,bootstrap,README"           README
+ ./xtf.sh "cap,env,bootstrap,cap.mkinterp.sh"  cap.mkinterp.sh
+ ./xtf.sh "cap,env,lang,indp,sntx,common-chr,ibnf" common-chr.ibnf
+ ./xtf.sh "cap,env,lang,indp,sntx,i,ibnf"      i.ibnf
+ ./xtf.sh "cap,env,lang,indp,sntx,i,smtx"      i.smtx
+ ./xtf.sh "cap,env,lang,indp,sntx,i,six-py"    i.six-py
+ ./xtf.sh "cap,env,lang,indp,sntx,i,test"      test.i
+ ./xtf.sh "cap,env,lang,indp,sntx,ibnf,ibnf"   ibnf.ibnf
+ ./xtf.sh "cap,env,lang,indp,sntx,ibnf,smtx"   ibnf.smtx
+ ./xtf.sh "cap,env,lang,indp,sntx,ibnf,six-py" ibnf.six-py
+ ./xtf.sh "cap,env,lang,indp,sntx,six,ibnf"    six.ibnf
+ ./xtf.sh "cap,env,lang,indp,sntx,sibnf,smtx"  sibnf.smtx
+ ./xtf.sh "cap,env,lang,indp,sntx,six,six-py"  six.six-py
+ ./xtf.sh "cap,env,lang,indp,sntx,toy,ibnf"    toy.ibnf
+ ./xtf.sh "cap,env,lang,indp,sntx,toy,test"    test.toy
+ ./xtf.sh "cap,env,lang,indp,sntx,toy,six-py"  toy.six-py
+ chmod 755 *.sh ; ./cap.mkinterp.sh
+  "; $ ); [:xcpt~ "cap,env,bootstrap,xta.sh" ]];
 
 
     [:para~ "The above script works in tandem with the following script and these two must exist on the host 
@@ -4300,23 +5802,24 @@ Reynolds, John C. 1972. Definitional interpreters for higher-order programming l
              These two scripts are small enough to type by hand into a text editor if necessary."];
 
 
-    [:xtnt~ `cap,env,bootstrap,cap.xtrfile.sh ~  ( "
+    [:xtnt~ `cap,env,bootstrap,xtf.sh ~  ( "
 #!/bin/bash                                                                                                                       
-# This is cap.xtrfile.sh                                                                                                          
+# This is xtf.sh                                                                                                          
 
   echo "Extracting File" $1 " as " $2 from cap.i
-  awk -v pats="$1 ~ " -v pat1e=":xcpt~ \"$1" -v pat2e=":xcps~ \"$1" '                                                                                          
+  awk -v pats="$1 ~ " -v pat1e=":xcpt~ \"$1" -v pat2e=":xcps~ \"$1" -v pat3e=":xcpe~ \"$1" '                                                                                          
    BEGIN { pout = 0 }                                                                                                             
    $0 ~ pats { pout = 1 }                                                                                                         
    $0 ~ pat1e { pout = 0 }                                                                                                         
    $0 ~ pat2e { pout = 0 }                                                                                                         
+   $0 ~ pat3e { pout = 0 }                                                                                                         
    pout > 1 {print}                                                                                                               
    pout > 0 { pout++ }                                                                                                            
   ' cap.i > ./$2
-  "; $ ); [:xcpt~ "cap,env,bootstrap,cap.xtrfile.sh" ]];
+  "; $ ); [:xcpt~ "cap,env,bootstrap,xtf.sh" ]];
 
     [:para~ "To begin bootstrapping the development process from a Unix host system which includes bash, sed and awk, place
-             the files cap.i, cap.xtrall.sh and cap.xtrfile.sh in a directory and then execute the cap.xtrall.sh shell script."];
+             the files cap.i, xta.sh and xtf.sh in a directory and then execute the xta.sh shell script."];
 
   )];["Producing a PDF":sect~(
 
@@ -4356,7 +5859,7 @@ s/\[\:xtne.*\"/\\begin\{minipage\}\[h\]\{.9\\textwidth\} \\begin\{example\}\\nor
 s/.*\[\:xcpt...\(.*\)\" \]\]\;/\\end\{vbtm\}\\end\{ptext\} \\end\{minipage\}/'| sed -e '
 s/.*\[\:xcps...\(.*\)\" \]\]\;/\\end\{vbtm\}\\end\{p2text\} \\end\{minipage\}/'| sed -e '
 s/.*\[\:xcpe...\(.*\)\" \]\]\;/\\end\{vbtm\}\\end\{example\} \\end\{minipage\}/'| sed -e '
-s/.*\[\:xcpd...\(.*\)\" \]\]\;/\\end\{vbtm\}\\end\{code\} \\end\{minipage\}/' | sed '38,46d' | sed -e '
+s/.*\[\:xcpd...\(.*\)\" \]\]\;/\\end\{vbtm\}\\end\{code\} \\end\{minipage\}/' | sed '42,50d' | sed -e '
 s/\[\:bleah...Give up converting now...\]\;/\\end\{document\}/' | sed -e '
 s/.\]\;\[.\(.*\).\:sect../\\section\{\1\}/'| sed -e 's/.\]\;\[.\(.*\).:...cap.sect\:capml...../\\section\{\1\}/' | sed -e '
 s/.\[\:.\[.cap.prel\:capml...../\\section\*\{\}/' | sed -e '
@@ -4387,10 +5890,14 @@ s/\[\:newp.\]./\\newpage /' > cap.latex; echo "\\end{document}" >> cap.latex; \
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{upquote}
 \definecolor{mygreen}{rgb}{0.9,1,0.9}
 \definecolor{mygrey}{rgb}{1,1,1}
 \definecolor{myblue}{rgb}{0.9,0.9,1}
 \definecolor{myred}{rgb}{1,0.9,0.9}
+\makeatletter
+\def\verbatim@font{\ttfamily\small}
+\makeatother
 \makeatletter\newenvironment{code}{%
    \noindent\begin{lrbox}{\@tempboxa}\begin{minipage}{\columnwidth}\setlength{%
    \parindent}{1em}}{\end{minipage}\end{lrbox}\colorbox{mygreen}{\usebox{\@tempboxa}}
@@ -4415,8 +5922,8 @@ s/\[\:newp.\]./\\newpage /' > cap.latex; echo "\\end{document}" >> cap.latex; \
 {\raggedright\footnotesize #1}}
 \begin{document}
 \title{The Computer Applications Platform, 0th Edition}
-\author{Copyright Charles Perkins}
-\date{December 2010}
+\author{Copyright 2009-2012, Charles Perkins}
+\date{December 2012}
 \maketitle
 \thispagestyle{empty}
 \tableofcontents
@@ -4432,30 +5939,92 @@ s/\[\:newp.\]./\\newpage /' > cap.latex; echo "\\end{document}" >> cap.latex; \
 #!/bin/bash                                                                                                                       
 # This is cap.mkinterp.sh                                                                                                          
 
-  cat ./common-chr.ibnf ./common-ari.ibnf ./calc.ibnf > ./tmp.ibnf
-  cat ./common-chr.ibnf ./common-ari.ibnf ./i.ibnf > ./itmp.ibnf
-  grep ": " tmp.ibnf  > ./auto.smtx 
-  grep ": " itmp.ibnf  > ./iauto.smtx 
-  grep "/ " tmp.ibnf  >> ./auto.smtx 
-  grep "/ " itmp.ibnf  >> ./iauto.smtx 
-  python autosmtx.py auto.smtx auto.py 
-  python autosmtx.py iauto.smtx iauto.py 
+#  cat ./common-chr.ibnf ./calc-example.ibnf > ./tmp.ibnf
+#  cat ./common-chr.ibnf ./i.ibnf > ./itmp.ibnf
+  cat ./ibnf.ibnf ./common-chr.ibnf > ./ibnftmp.ibnf
+  cat ./six.ibnf ./common-chr.ibnf > ./sibnftmp.ibnf
+#  grep ": " tmp.ibnf  > ./auto.smtx 
+#  grep ": " itmp.ibnf  > ./iauto.smtx 
+  grep ": " ibnftmp.ibnf  > ./ibnfauto.smtx 
+#  grep "/ " tmp.ibnf  >> ./auto.smtx 
+#  grep "/ " itmp.ibnf  >> ./iauto.smtx 
+  grep "/ " ibnftmp.ibnf  >> ./ibnfauto.smtx 
+#  python autosmtx.py auto.smtx auto.py 
+#  python autosmtx.py iauto.smtx iauto.py 
+  python autosmtx.py ibnfauto.smtx ibnfauto.py 
   chmod 755 i2py.sh
-  ./i2py.sh tmp.ibnf tmp1.py
-  ./i2py.sh itmp.ibnf itmp1.py
+#  ./i2py.sh tmp.ibnf tmp1.py
+#  ./i2py.sh itmp.ibnf itmp1.py
+  ./i2py.sh ibnftmp.ibnf ibnftmp1.py
   chmod 755 s2py.sh
   ./s2py.sh smtx.py tmp2.py
-  ./s2py.sh i.smtx itmp2.py
-  cat ./pro.py ./tmp1.py ./tmp2.py ./auto.py epi.py | sed -e '/^$/d' > parser.py 
-  cat ./pro.py ./itmp1.py ./itmp2.py ./iauto.py epi.py | sed -e '/^$/d' > iparser.py 
-  chmod 755 parser.py
-  chmod 755 iparser.py
+#  ./s2py.sh i.smtx itmp2.py
+  ./s2py.sh ibnf.smtx ibnftmp2.py
+#  cat ./pro.py ./tmp1.py ./tmp2.py ./auto.py epi.py | sed -e '/^$/d' > parser.py 
+#  cat ./pro.py ./itmp1.py ./itmp2.py ./iauto.py epi.py | sed -e '/^$/d' > iparser.py 
+  cat ./pro.py ./ibnftmp1.py ./ibnftmp2.py ./ibnfauto.py epi.py | sed -e '/^$/d' > ibnfparser.py 
+#  chmod 755 parser.py
+#  chmod 755 iparser.py
+  chmod 755 ibnfparser.py
+  "; $ ); [:xcpt~ "cap,env,bootstrap,cap.mkinterp.sh" ]];
+
+    [:para~ "The script continues:"];
+
+
+    [:xtnt~ `cap,env,bootstrap,cap.mkinterp.sh ~  ( "
 
   echo "Making the interpreter and then calling it."
 
-  python parser.py calc.txt test.out
-  python iparser.py test.i test.out
-  cat test.i
+  python parser.py calc-example.input blank.txt test.out; cat test.out
+#  python iparser.py test.i iauto.smtx test.out
+#  cat test.i
+
+  echo "constructing ibnf meta compiler using sed hack compiler"
+  python ibnfparser.py ibnftmp.ibnf ibnf.smtx ibnfmeta.py
+
+  echo "calling the ibnf meta compiler on its own ibnf specification"
+  python ibnfmeta.py ibnftmp.ibnf ibnf.smtx ibnfmeta2.py
+ 
+  echo "calling the ibnf meta compiler on ibnf of sibnf"
+  python ibnfmeta.py sibnftmp.ibnf sibnf.smtx sixparser.py
+ 
+  echo "calling the sibnf meta compiler on sibnf of ibnf"
+  python sixparser.py ibnf.six-py sibnf.smtx ibnfmeta.smtx
+ 
+  echo "calling the sibnf meta compiler on sibnf of sibnf"
+  python sixparser.py six.six-py sibnf.smtx sibnfmeta.smtx
+ 
+  echo "Building the calculator Parser"
+  cat ./common-chr.ibnf ./calc-example.ibnf > ./calc-example-full.ibnf
+  python sixparser.py calc-example.six-py blank.txt calc-example.smtx
+  python ibnfmeta.py calc-example-full.ibnf calc-example.smtx calc-example.py
+  python calc-example.py calc-example.input blank.txt calc.out
+  cat calc.out
+ 
+
+  echo "Building the ibnf Parser"
+  python sixparser.py ibnf.six-py blank.txt ibnf-smtx.py
+  cat ./common-chr.ibnf ./ibnf.ibnf > ./ibnf-full.ibnf
+  python ibnfmeta.py ibnf-full.ibnf ibnf-smtx.py ibnf.py
+  python ibnf.py ibnf-full.ibnf ibnf-smtx.py ibnfmeta2.py
+
+  echo "Building toy compiler"
+  python sixparser.py toy.six-py blank.txt toy-smtx.py
+  cat ./common-chr.ibnf ./toy.ibnf > ./toy-full.ibnf
+  python ibnfmeta.py toy-full.ibnf toy-smtx.py toy-compile.py
+  python toy-compile.py test.toy blank.txt toy.out
+  chmod 755 toy.out
+  ./toy.out
+
+  echo "Building i compiler"
+  python sixparser.py i.six-py blank.txt i-smtx.py
+  cat ./common-chr.ibnf ./i.ibnf > ./i-full.ibnf
+  python ibnfmeta.py i-full.ibnf i-smtx.py i-compile.py
+  python i-compile.py test.i blank.txt i.out
+  chmod 755 i.out
+  ./i.out
+
+
 
   "; $ ); [:xcpt~ "cap,env,bootstrap,cap.mkinterp.sh" ]];
 
@@ -4465,7 +6034,21 @@ s/\[\:newp.\]./\\newpage /' > cap.latex; echo "\\end{document}" >> cap.latex; \
 
     [:xtnt~ `cap,env,bootstrap,pro.py ~  ( "
 import sys
-fi = file(sys.argv[1]).read(); h = {}
+from binascii import *
+fi = file(sys.argv[1]).read(); h = {}; T=True; F=False
+
+def n2z( a ):
+  return ( '0' if a=='' else a )
+
+def be2le( a ):
+  return a[6:8]+a[4:6]+a[2:4]+a[0:2]
+
+def inclast( a ):
+  return a.rpartition(".")[0]+"."+str(int(a.rpartition(".")[2])+1)
+
+def unesc( a ):
+  return a.decode('string_escape')
+
 def mark( p, s, t ):
   ( v, m, ss, l, c, a ) = t
   if t[1]:  x = p +"-" + str(s);  h[x]=( v, m, l, a ); return t
@@ -4491,12 +6074,21 @@ def andmemo( m ):
     if not m[i]: r = False
   return r
 
+outdata = ""
+
+def output( s ):
+  global outdata
+  outdata = outdata + str(s)
+
+
 registers={}
 context={}
 mseq = 0
 dseq = 1
 
-#fo = open(sys.argv[2], "w+")
+semantics = file(sys.argv[2]).read();
+fo = open(sys.argv[3], "w+")
+
   "; $ ); [:xcpt~ "cap,env,bootstrap,pro.py" ]];
 
     [:para~ "We need to convert grammars of the following form:"];
@@ -4655,11 +6247,12 @@ s/mark("\(.*\)",s,(False\(.*\)))/mark("\1",s,(False\2))/g'  > ./$2
 
     [:xtnt~ `cap,env,bootstrap,autosmtx.py ~  ( "
 import sys
+from binascii import *
 
 fi = open(sys.argv[1], "r")
 fo = open(sys.argv[2], "w+")
 line = fi.readline()
-params = "_s( a, m, s, e, c, n ):  return ( True, True, s, e-s, c,(n,"
+params = "_s(a,m,s,e,c,n):  return ( True, True, s, e-s, c,(n,"
 tail = "]))"
 
 while line:
@@ -4686,14 +6279,6 @@ while line:
 # This is s2py.sh                                                                                                          
 
 echo "Creating semantic actions for" $1 " as " $2
-#if [ ! -f "./$1" ]
-#then
-#  echo " Error ------- $1 file not found."
-#else
-#  sed 's/^\(.*\)$/# \1/' $1 > ./tfa
-#  sed 's/^# *\([a-z]*\) *(\(.*\)).;/ \1_s ( ) { \2 }/' ./tfa > ./tfb
-#  cp ./tfb ./$2
-#fi
 cp $1 $2
   "; $ ); [:xcpt~ "cap,env,bootstrap,s2py.sh" ]];
 
@@ -4701,23 +6286,16 @@ cp $1 $2
 
     [:xtnt~ `cap,env,bootstrap,epi.py ~  ( "
 
-#fo.write(start(s).o)
-#fo.close()
 
-
-(v,m,s,l,c,a) = start_p( 0, ({},'<1>','<0>') )
+(v,m,s,l,c,a) = syntax_p( 0, ({},'<1>','<0>') )
 if v: 
-  print "Parsed "+a[0]+" OK"
-  print "tree:"
-  print a
-  print "result:"
-  print build (v,m,s,l,c,a)
-  print "definitions:"
-  print context
-  print "Final context:"
-  for i in c[0]:
-    print str(i) +" is " + str(c[0][i])
+  print "Parsed OK"
 else: print "Failed to Parse"
+
+print >> fo, a[1] 
+
+fo.close()
+
   "; $ ); [:xcpt~ "cap,env,bootstrap,epi.py" ]];
 
     [:para~ "A calculator syntax will stand in for the i syntax to test things out:"];
@@ -4749,15 +6327,15 @@ techniques, and implementation.
 
 To bootstrap the system (as far as it is currently implemented) 
 in a Unix environment with bash, sed, awk, python, place the files 
-cap.i, cap.xtrfile.sh, and cap.xtrall.sh in a directory, make the 
-shell scripts executable, and then execute cap.xtrall.sh
+cap.i, xtf.sh, and xta.sh in a directory, make the 
+shell scripts executable, and then execute xta.sh
 
 After bootstrapping the system, if you have latex installed on your
 host system you can execute the i2l.sh script to produce the cap.pdf file.
 
 The system is released under the MIT free software license:
 
-Copyright (c) 2009 Charles Perkins
+Copyright (c) 2009-2011 Charles Perkins
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
@@ -5180,7 +6758,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 
     [:para~ "Internationalization, Localization, etc."];
 
-  )]);@[ "Appendix I -- Requirements" :chap~(
+  )]);@[ "Appendix I -- Goals" :chap~(
      [:prel~(
 
     [:para~ "Claims and Fulfillment."];
