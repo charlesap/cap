@@ -5922,8 +5922,8 @@ s/\[\:newp.\]./\\newpage /' > cap.latex; echo "\\end{document}" >> cap.latex; \
 {\raggedright\footnotesize #1}}
 \begin{document}
 \title{The Computer Applications Platform, 0th Edition}
-\author{Copyright 2009-2012, Charles Perkins}
-\date{December 2012}
+\author{Copyright 2009-2014, Charles Perkins}
+\date{April 2014}
 \maketitle
 \thispagestyle{empty}
 \tableofcontents
